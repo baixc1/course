@@ -5,3 +5,4 @@ thinkphp
 4、安装php, php think bulid --module demo
 5、浏览器错误乱码: echo iconv('gbk', 'utf-8', $e->getMessage());
 6、拷贝项目打开报错: 修改mysql配置(data\conf)
+7、mysql打不开(服务名无效): mysqld --install
