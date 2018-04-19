@@ -20,8 +20,8 @@ Hypertext Preprocessor
 9、字符串
 	并置运算符.
 	strlen();
-	strpos();
-	换行: \n
+	strpos(str,find);  查找字符串位置, 没有返回false
+	换行: "\n"
 10、array()
 	数值数组、关联数组array(''=>'',..)、多维数组
 	count()
@@ -59,9 +59,10 @@ Hypertext Preprocessor
 	define/defined;		//定义/检测常量
 	is_array();		//是-1
 	extract;		//提取变量
-	str_replace
-
-
+	str_replace(find,replace,str) //替换
+	isset			//检测变量是否定义且不为NULL
+	empty 			//等价于 !isset($var) || $var == false
+	
 advanced course
 PHP包含
 	include,require(错误中断) : 引用页头、公用文件、变量

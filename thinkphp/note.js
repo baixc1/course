@@ -8,21 +8,36 @@
 		php打印log: file_put_contents('文件根目录',"",[FILE_APPEND]);
 					file_get_contents	读取文件内容
 3、mysql打不开(服务名无效): mysqld --install
-4、 导航栏模板: themes\bqmmfal_mobile\Common
-	全局函数: application\Common\Common
-5、F方法 读/写缓存 C方法 读取配置   M方法  实例化一个基础模型类
-6、	tree类  simplewind\Lib\Util
-	html模板类 simplewind\Core\Library\Think\Template
-7、->join()->where()->order()->limit()->select() 	数据库操作
+4、	F方法 读/写缓存 
+	C方法 读/写配置   
+	M方法  实例化一个基础模型类
+	E方法 	抛出异常处理, 中止程序
+	L方法  获取和设置语言定义(不区分大小写)
+	
+5、->join()->where()->order()->limit()->select() 	数据库操作
+6、a标签跳转流程: 
+	a)引导类 Think\Think::start()
+	b)启动类 Think\App::run();
+	c)方法   Think\App\exec
+	d)url请求Think\Dispatcher
 
+	\data\conf\config.php   URL_MODEL值为0   叫做普通模式。如：http://localhost/index.php?m=模块&a=方法
+	.htaccess文件  rewrite规则隐藏掉index.php，生成：http://localhost/模块/方法
+					访问^test.html$ index.php/?m=page&a=index&id=1000 等价于(重定向)  localhost(网站)/index.php(主页入口)/page(控制器)/index(方法)/id(参数)/1000(值)
+	访问链接, 调用对应的控制器方法, 可传参  
+	
 
-
-
+***函数***
+load_config 加载配置文件 
+array_merge	数字合并
+file_exists_case 区分大小写的文件存在判断
 
 ***模型***
 
 *模板*
 变量输出: 控制器中赋值, 在模板中使用.常量直接使用
 	$this->display();输出模板文件
+		默认参数: TPL/模板默认主题/默认模块名/操作名+模板后缀
+		继承调用, 子类可重载该方法
 	$this->assign('name',$val);模板变量赋值
 	index控制器模块获取数据
