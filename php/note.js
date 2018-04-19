@@ -6,7 +6,6 @@ Hypertext Preprocessor
 	<?php代码?>
 	输出指令: echo(可输出任意个字符串), print(输出一个字符串,返回1)
 	.号: 连接符, .=: 连续(类似js + ) 
-	解析双引号内的php变量
 	@错误控制运算符
 5、	变量: $变量名
 	弱类型
@@ -18,10 +17,12 @@ Hypertext Preprocessor
 8、常量
 	define();
 9、字符串
+	用''或""(会替换其中变量的值)修饰
 	并置运算符.
 	strlen();
 	strpos(str,find);  查找字符串位置, 没有返回false
 	换行: "\n"
+	转义字符: "\"
 10、array()
 	数值数组、关联数组array(''=>'',..)、多维数组
 	count()
@@ -63,13 +64,16 @@ Hypertext Preprocessor
 	isset			//检测变量是否定义且不为NULL
 	empty 			//等价于 !isset($var) || $var == false
 	
-advanced course
+***advanced course***
 PHP包含
 	include,require(错误中断) : 引用页头、公用文件、变量
 PHP JSON
 	json_encode json_decode
 	
-reference manual
-1、dirpath() 返回目录路径	
+***reference manual***
+dirpath() 返回目录路径	
+PHP String	
+	explode(separator,str);		//把字符串打散为数组
+
 	
 	

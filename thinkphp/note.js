@@ -25,7 +25,7 @@
 	.htaccess文件  rewrite规则隐藏掉index.php，生成：http://localhost/模块/方法
 					访问^test.html$ index.php/?m=page&a=index&id=1000 等价于(重定向)  localhost(网站)/index.php(主页入口)/page(控制器)/index(方法)/id(参数)/1000(值)
 	访问链接, 调用对应的控制器方法, 可传参  
-	
+	实例化控制器 controller函数		thinkphp\Core\Common\functions.php  new 控制器();
 
 ***函数***
 load_config 加载配置文件 
