@@ -63,6 +63,13 @@ Hypertext Preprocessor
 	str_replace(find,replace,str) //替换
 	isset			//检测变量是否定义且不为NULL
 	empty 			//等价于 !isset($var) || $var == false
+	intval			//获取变量的整数值
+	gettype			//获取变量类型
+	
+	
+***form***
+$_GET();   				//可在链接的入口文件中获取get请求参数	
+$_SERVER('PATH_INFO');	//url中脚本之后的路径
 	
 ***advanced course***
 PHP包含

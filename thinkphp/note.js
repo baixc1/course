@@ -15,7 +15,14 @@
 	L方法  获取和设置语言定义(不区分大小写)
 	
 5、->join()->where()->order()->limit()->select() 	数据库操作
-6、a标签跳转流程: 
+6、链接导向流程 
+	index.php(入口文件) -> 
+	Core/ThinkPHP.php(框架核心入口文件) -> 
+	Core/Library/Think/Think.class.php(引导类) ->
+	同上/App.class.php(启动类,创建控制器实例-new class) ->
+	...
+	
+
 	a)引导类 Think\Think::start()
 	b)启动类 Think\App::run();
 	c)方法   Think\App\exec
@@ -26,6 +33,15 @@
 					访问^test.html$ index.php/?m=page&a=index&id=1000 等价于(重定向)  localhost(网站)/index.php(主页入口)/page(控制器)/index(方法)/id(参数)/1000(值)
 	访问链接, 调用对应的控制器方法, 可传参  
 	实例化控制器 controller函数		thinkphp\Core\Common\functions.php  new 控制器();
+7、自定义标签模板
+	新建自定义标签类, 继承Think\Template\TagLib
+
+
+
+***配置***
+c(load_config(conf.php)) 	获取和设置配置参数   设置static $_config
+
+
 
 ***函数***
 load_config 加载配置文件 
