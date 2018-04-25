@@ -2,7 +2,7 @@
 1、浏览器错误乱码: echo iconv('gbk', 'utf-8', $e->getMessage());
 2、服务器项目打开报错: 
 		\kilimanjaro\.htaccess RewriteRule才能在localhost看到文件
-		failed to open stream  	index.php 开启调试模式
+		failed to open stream  	index.php 开启调试模式 或 删除data\runtime\common~runtime.php配置文件(删除后会自动生成新文件,且配置路径正确, 调试模式下无该文件)
 		Access denied for user 'root'@'localhost'   data/conf/db.php 修改DB_PWD,DB_NAME 刷新页面
 		data/runtime/Logs/Portal/.log   错误日志
 		php打印log: file_put_contents('文件根目录',"",[FILE_APPEND]);
@@ -35,7 +35,8 @@
 	实例化控制器 controller函数		thinkphp\Core\Common\functions.php  new 控制器();
 7、自定义标签模板
 	新建自定义标签类, 继承Think\Template\TagLib
-
+8、数组越界报错解决 isset($arr[key])
+9、thinkphp中, .= 左值未定义会报错, 但是不影响程序的执行
 
 
 ***配置***
