@@ -13,6 +13,7 @@
 11、vertical-align: text-bottom;(行内元素底端对齐父元素字体底端)	定义该元素基线相对于该行基线的垂直对齐
 12、圆方字体引入	@font-face{font-family: '',url:''}自定义字体系列及引入路径
 13、float布局文字环绕
+14、<a href='/'></a>	链接根目录
 
 
 

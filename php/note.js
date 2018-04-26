@@ -31,6 +31,9 @@ Hypertext Preprocessor
 11、数组排序
 	sort,rsort,asort,ksort,arsort,krsort
 	print_r: 打印数组
+	$arr[key][] = data;		//仅对空key有效
+	数组方法: array_'js方法'(push,pop,slice,splice...)($arr,$val);
+	
 12、超级全局变量
 	superglobals($GLOBAL, $_SREVER, $_REQUEST, $_POST, $_GET)
 13、魔术变量
@@ -80,7 +83,8 @@ PHP JSON
 ***reference manual***
 dirpath() 返回目录路径	
 PHP String	
-	explode(separator,str);		//把字符串打散为数组
-
+	explode(separator,str);		//把字符串切割为数组
+PHP PCRE
+	preg_match(pattern,str);	//匹配,返回0 or 1
 	
 	
