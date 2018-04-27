@@ -40,25 +40,64 @@ d)url请求Think\Dispatcher
 
 
 ***html模板引擎初始化***
-1、核心TagLib的子类 
+入口文件
+	require()
+
+Think\Think
+	start()
+
+Think\App
+	run() -> exec() -> invokeAction() 
+	
+ReflectionMethod
+	invoke()
+	
+application页面控制器(入口)
+	index()
+
+application公用(common)控制器
+	display()
+	
+Think\Controller
+	display()
+	
+Think\View
+	display()
+	fetch()
+	
+Think\Hook
+	listen()监听标签的插件
+	exec()执行某个插件
+	
+Behavior\ParseTemplateBehavior
+	run()系统行为扩展: 模板解析
+
+Think\Template类
+	fetch()加载模板 -> loadTemplate()加载主模板 -> 
+	compiler()编译模板文件(页面)内容 -> parse()模板解析入口 -> 
+	parseTagLib()解析标签库 ##include## -> preg_replace_callback() ##head## -> parseXmlTag()
+
+核心TagLib的子类 		
+	include() 模板语法糖解析为php语法, 一次一个解析单个模板引擎
 	a、计算引擎路径
 	b、获取引擎内容
 	c、解析模板内容(可缓存) 	$this->tpl->parse($content)
-2、$backtrace = debug_backtrace();	// 加入跟踪调试, 查找函数调用栈
-   dump($backtrace);
+
 
 
 
 
 
 ***调试***
-1、打印log: 				file_put_contents('文件根目录',"",[FILE_APPEND]);
+1、打印log: 				file_put_contents('log',"",FILE_APPEND);
 							file_get_contents	读取文件内容
 2、页面输出类型和值			dump($var);		打印类型-值
 3、页面Trace				入口文件定义define('APP_DEBUG', true), 开启调试模式
 							默认的调试模式配置文件	//Conf\debug.php
 							trace(); 数组有特殊标志, false 不打印, true 打印1		//debug panel
 4、模型调试(mysql执行语句)  echo $var->getLastSql();	
+5、跟踪调试					$backtrace = debug_backtrace();	// 函数调用栈
+ 
 
 
 ***配置***
@@ -73,9 +112,11 @@ __LINE__	: 该代码所在行数
 
 
 ***函数***
-load_config 加载配置文件 
-array_merge	数字合并
-file_exists_case 区分大小写的文件存在判断
+load_config 		//加载配置文件 
+array_merge			//数字合并
+file_exists_case 	//区分大小写的文件存在判断
+ini_get($str)				//获取配置值
+preg_replace_callback($pattern,fn,$subject);	//正则匹配替换
 
 F方法 读/写缓存 
 C方法 读/写配置   

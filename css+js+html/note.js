@@ -1,21 +1,56 @@
 ***css***
+*样式
 1、多个background用','号隔开,蒙层优先级高->低
-2、margin: auto; 对块标签元素有效，作用于自身
-	text-align: center; 对行内元素/文本有效，作用域子元素
-3、background-size: len,len;	设置多个背景的宽高
-4、list-style(ul的简写属性) 设置列表项标志
-5、nth-child(n)  先找某元素的父元素，然后找第n个(递归查找)子元素且元素必须为原元素
-6、$(selector).toggle(); 	切换元素可见状态
-7、text-decoration: none; 	去掉a标签修饰
-8、cursor: pointer/default;		手型/默认光标
-9、target: _blank/_self..		在何处打开文档链接（文档重定向）
-10、a:link	未访问链接   css伪类: link、visited、hover、active 可覆盖
-11、vertical-align: text-bottom;(行内元素底端对齐父元素字体底端)	定义该元素基线相对于该行基线的垂直对齐
-12、圆方字体引入	@font-face{font-family: '',url:''}自定义字体系列及引入路径
-13、float布局文字环绕
-14、<a href='/'></a>	链接根目录
+2、background-size: len,len;	设置多个背景的宽高
+3、text-decoration: none; 	去掉a标签修饰
+4、list-style(ul的简写属性) 	设置列表项标志
+5、vertical-align: text-bottom;	(行内元素底端对齐父元素字体底端)	定义该元素基线相对于该行基线的垂直对齐
 
 
+*框模型*
+1、	margin: auto; 	对块标签元素有效，作用于自身
+2、text-align: center; 	对行内元素/文本有效，作用域子元素
+	
+*选择器*
+1、nth-child(n)  	先找某元素的父元素，然后找第n个(递归查找)子元素且元素必须为原元素
+2、cursor: pointer/default;		手型/默认光标
+3、a:link	未访问链接   css伪类: link、visited、hover、active 可覆盖
+
+
+*定位*
+1、float布局存在文字环绕情况
+
+
+*高级*
+1、圆方字体引入	@font-face{font-family: '',url:''}		//自定义字体系列及引入路径
+2、flex布局
+	.box{display: flex} 	//父元素启用弹性布局
+	.child{						//子元素
+		justify-content: center;	//水平居中
+		align-item: center;		//竖直居中
+		flex-grow: 1;				//平分剩余空间
+		flex: 1;					//剩余空间所占比例,
+	}
+
+
+***html***
+1、meta标签
+	http-equiv="X-UA-Compatible" content="IE=edge"  //文档兼容模
+2、a标签
+	href='/'					//链接根目录
+	target: _blank/_self..		//在何处打开文档链接（文档重定向）
+3、canvas
+	画扇形图
+	a、cxt = $('#id').getContext();		//获取画布对象
+	b、cxt.beginPath()					//起始或重置路径
+	c、cxt.moveTo()						//把路径移动到画布中的指定点
+	d、cxt.arc()						//画弧
+	e、ctx.strokeStyle					//笔触颜色、渐变
+	f、ctx.fillStyle					//填充色
+	g、ctx.fill							//填充
+	
+	
+	
 
 ***浏览器***
 *加载、解析、渲染*
