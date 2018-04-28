@@ -3,3 +3,7 @@
 
 *效果*
 1、$(selector).toggle(); 	切换元素可见状态
+
+*CSS*
+尺寸
+	width([val/fn])

@@ -5,6 +5,7 @@
 3、text-decoration: none; 	去掉a标签修饰
 4、list-style(ul的简写属性) 	设置列表项标志
 5、vertical-align: text-bottom;	(行内元素底端对齐父元素字体底端)	定义该元素基线相对于该行基线的垂直对齐
+6、cursor: pointer/default;		手型/默认光标
 
 
 *框模型*
@@ -13,8 +14,7 @@
 	
 *选择器*
 1、nth-child(n)  	先找某元素的父元素，然后找第n个(递归查找)子元素且元素必须为原元素
-2、cursor: pointer/default;		手型/默认光标
-3、a:link	未访问链接   css伪类: link、visited、hover、active 可覆盖
+2、a:link	未访问链接   css伪类: link、visited、hover、active 可覆盖
 
 
 *定位*
@@ -29,27 +29,36 @@
 		justify-content: center;	//水平居中
 		align-item: center;		//竖直居中
 		flex-grow: 1;				//平分剩余空间
-		flex: 1;					//剩余空间所占比例,
+		flex: 1;					//剩余空间所占比例, 可为小数
 	}
 
 
 ***html***
 1、meta标签
-	http-equiv="X-UA-Compatible" content="IE=edge"  //文档兼容模
+	http-equiv="X-UA-Compatible" content="IE=edge"  //文档兼容模式
+	name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable="no"	//手机适配
 2、a标签
 	href='/'					//链接根目录
 	target: _blank/_self..		//在何处打开文档链接（文档重定向）
 3、canvas
-	画扇形图
-	a、cxt = $('#id').getContext();		//获取画布对象
-	b、cxt.beginPath()					//起始或重置路径
-	c、cxt.moveTo()						//把路径移动到画布中的指定点
-	d、cxt.arc()						//画弧
-	e、ctx.strokeStyle					//笔触颜色、渐变
-	f、ctx.fillStyle					//填充色
-	g、ctx.fill							//填充
+	画扇形图	
+	a、cxt = $('#id')[0].getContext("2d");		//获取画布对象
 	
+	循环
+	a、cxt.beginPath()					//起始或重置路径
+	b、cxt.moveTo()						//把路径移动到画布中的指定点
+	c、cxt.arc()						//画弧
+	d、ctx.fillStyle					//填充色
+	e、ctx.fill							//填充
+	f、ctx.textAlign					//字居中
+	g、ctx.fillText						//设置字及其位置
 	
+	注意: 
+	a、元素挂载后才能执行画图
+	b、html的width属性才是设置(画板和画纸(默认300*150))宽高, style只设置画板宽度
+	c、fillText的fillStyle不能和fill一样
+	d、fillText计算位置 x+r*cos(angle)
+	f、旋转起始位置可用-90开始
 	
 
 ***浏览器***
