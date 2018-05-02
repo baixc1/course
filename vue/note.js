@@ -1,5 +1,6 @@
 *周期*
-created, counted
+created, 
+counted: 
 
 *方法*
 methods

@@ -1,12 +1,13 @@
 ***css***
 *样式
 1、多个background用','号隔开,蒙层优先级高->低
-2、background-size: len,len;	设置多个背景的宽高
-3、text-decoration: none; 	去掉a标签修饰
-4、list-style(ul的简写属性) 	设置列表项标志
-5、vertical-align: text-bottom;	(行内元素底端对齐父元素字体底端)	定义该元素基线相对于该行基线的垂直对齐
-6、cursor: pointer/default;		手型/默认光标
-
+2、background-size: len,len;	//设置多个背景的宽高
+3、text-decoration: none; 		//去掉a标签修饰
+4、list-style(ul的简写属性) 	//设置列表项标志
+5、vertical-align: text-bottom;	//(行内元素底端对齐父元素字体底端)	定义该元素基线相对于该行基线的垂直对齐
+6、cursor: pointer/default;		//手型/默认光标
+7、overflow: auto;				//设置滚动条(必须有高度), 负margin可隐藏滚动条
+8、outline: none;				//解决button点击后出现的框
 
 *框模型*
 1、	margin: auto; 	对块标签元素有效，作用于自身

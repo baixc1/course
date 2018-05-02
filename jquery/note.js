@@ -7,3 +7,6 @@
 *CSS*
 尺寸
 	width([val/fn])
+
+*ajax*
+$.ajax(url,settings);		//注意跨域问题

@@ -7,4 +7,4 @@
 		minView: '',		//最小的选择范围(Month -> 日)
 		bootcssVer: 3,		//显示左右箭头
 		todayBtn: true		//显示今日按钮
-	})
+	}).on('changeDate',function(){});	//绑定事件
