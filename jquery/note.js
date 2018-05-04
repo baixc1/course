@@ -10,3 +10,4 @@
 
 *ajax*
 $.ajax(url,settings);		//注意跨域问题
+$.get(url,data,success);
