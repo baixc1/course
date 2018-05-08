@@ -1,28 +1,36 @@
+#!/usr/bin/python
+#coding:utf-8
 
-# coding=UTF-8
-from selenium import webdriver
+import urllib2
+import json
+import requests
+from bs4 import BeautifulSoup
+import re
+import os
+
+baseUrl = "http://pic.sogou.com"
+url = "http://pic.sogou.com/pic/emo/"
 
 
-"""
-browser = webdriver.Chrome()
-browser.get("http://www.baidu.com")
-print browser.title 
-browser.find_element_by_id("kw" ).send_keys( "selenium")
-browser.find_element_by_id("su").click()
-print browser.title 
-browser.maximize_window() 
-browser.quit()
-"""
+def fun(url):
+	try:
+		list = []
+		str = ''
+		html = urllib2.urlopen(url)							#file-like object
+		soup = BeautifulSoup(html,'lxml')					#文档对象
+		div = soup.find("div","classify-top-fixed")
+		a = div.find_all("a",href=re.compile("pic"))		#a链接对象
+		
+		fd = os.open('url.txt', os.O_RDWR|os.O_CREAT)		#新建读写权限文档
+		for n in range(len(a)):								
+			text = baseUrl + a[n].get('href')				#获取href属性值
+			list.append(text)
+			str += text+'\n'
+		os.write(fd,str)									#href写入文件
+	except Exception,e:
+		print e
+	finally:
+		pass
 
-import time
-
-driver = webdriver.Chrome()
-driver.get("http://www.youdao.com")
-
-# 获得cookie信息
-cookie= driver.get_cookies()
-
-#将获得cookie的信息打印
-print cookie
-
-driver.quit()
+fun(url)
+	

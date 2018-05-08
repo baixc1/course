@@ -9,5 +9,6 @@
 	width([val/fn])
 
 *ajax*
-$.ajax(url,settings);		//注意跨域问题
-$.get(url,data,success);
+$.ajax(url,settings);		//注意跨域问题,url,data,fun或{url:'',data:{},success:(){}}
+$.get(url,data,fun);
+$.post(url,data,fun);					
