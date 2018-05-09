@@ -16,7 +16,8 @@
 	节点内容
 	...
 6、搜索文档树
-	find(name, attrs)
+	过滤器				//字符串、正则(re.compile())(match匹配)、列表、True、方法
+	find(name, attrs, ...)		
 	find_all('a')
 	get('href')
 7、css选择器
@@ -30,11 +31,12 @@
 
 *Requests
 1、发送请求
-	r = requests.get/post...(url,header,params...)			
+	r = requests.get/post...(url,header,params...)			//return response object
 2、传递url参数
 	params = {}
 3、响应内容
-	r.text			
+	r.text		
+	r.url
 	r.encoding
 	r.content
 
