@@ -1,0 +1,5 @@
+<!--导航条-->  
+<view class="main">  
+  <button wx:for="{{list}}" data-url="{{item.url}}" bindtap="changePage">{{item.text}}</button>  
+</view>  
+  

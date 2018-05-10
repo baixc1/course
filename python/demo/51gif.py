@@ -5,6 +5,9 @@ import urllib2
 import requests
 from bs4 import BeautifulSoup
 import re
+import sys
+reload(sys)		#防止module报错
+sys.setdefaultencoding('utf-8')
 
 url = "http://www.51gif.cn/tag/"
 file = open('T51gif.txt','w')
@@ -13,6 +16,8 @@ file = open('T51gif.txt','w')
 def fun(url,flag):
 	try:
 		response = requests.get(url)						#response object
+		if flag == 3:										#encoding for Chinese characters
+			response.encoding = "utf-8"
 		html = response.text								#tag attr which will get
 		soup = BeautifulSoup(html,"html.parser")
 		
@@ -30,8 +35,12 @@ def fun(url,flag):
 			for m in range(2,int(page)+1):
 				text = url[0:len(url)-5]+ str(m) + url[-5:]
 				file.write(text + '\n')
-				print text
-		
+				fun(text,3)
+		elif flag == 3:
+			div = soup.find("div","divPic")
+			list = div.find_all("img")
+			for n in range(len(list)):
+				file.write(list[n].get('src') + '\n' + list[n].get('alt'))
 	except Exception,e:
 		print e
 	finally:

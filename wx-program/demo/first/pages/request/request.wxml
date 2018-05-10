@@ -1,0 +1,7 @@
+<!--pages/request/request.wxml-->
+<button bindtap="res">加载跟多和刷新</button>
+<view class="main">
+  <view wx:for="{{list}}">{{item}}</view>
+  <view wx:if="{{!state}}" class="no-more">no more</view>
+</view>
+

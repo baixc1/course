@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/tabs/tabs",
+    "pages/loadmore/loadmore",
+    "pages/load/load",
+    "pages/temp/temp",
+    "pages/request/request"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "first",
+    "navigationBarTextStyle": "white"
+  }
+}

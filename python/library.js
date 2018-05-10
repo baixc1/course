@@ -38,7 +38,8 @@
 	r.text		
 	r.url
 	r.encoding
-	r.content
+	r.content			//response.encoding = "utf-8", 设置返回数据的编码, 不设可能报错
+	r.json
 
 	
 *selenium-webdriver

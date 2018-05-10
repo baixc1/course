@@ -15,7 +15,9 @@
 	
 *选择器*
 1、nth-child(n)  	先找某元素的父元素，然后找第n个(递归查找)子元素且元素必须为原元素
-2、a:link	未访问链接   css伪类: link、visited、hover、active 可覆盖
+2、a:link	未访问链接   
+	css伪类: link、visited、hover、active 可覆盖
+	css伪元素:	:after{content: ''}			//可作为下边框
 
 
 *定位*
@@ -25,7 +27,10 @@
 *高级*
 1、圆方字体引入	@font-face{font-family: '',url:''}		//自定义字体系列及引入路径
 2、flex布局
-	.box{display: flex} 	//父元素启用弹性布局
+	.box{
+		display: flex,			//父元素启用弹性布局
+		flex-direction: column	//Flexible projects will be displayed vertically
+	} 	
 	.child{						//子元素
 		justify-content: center;	//水平居中
 		align-item: center;		//竖直居中

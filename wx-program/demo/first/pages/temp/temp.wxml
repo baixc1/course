@@ -1,0 +1,7 @@
+
+<import src="template.wxml" />
+<include src="header.wxml"/>
+<template is="msgItem" data="{{...item}}"/>
+<block wx:for="{{[1, 2, 3, 4, 5]}}">
+    <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"/>
+</block>
