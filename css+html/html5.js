@@ -19,3 +19,12 @@
 	cxt.fillStyle=grd;
 6、SVG
 7、地理定位
+8、web存储
+	localStorage   localStorage.setItem() 
+	sessionStorage 	...
+9、应用缓存
+	cache manifest 
+10、Web Worker
+	typeof(Worker)
+	postMessage()
+11、表单输入类型
