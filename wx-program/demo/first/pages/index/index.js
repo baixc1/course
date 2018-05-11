@@ -6,6 +6,14 @@ Page({
       text: 'temp', url: '../temp/temp'
     }, {
       text: 'loadmore and refresh', url: '../request/request'
+    }, {
+      text: 'components', url: '../components/components'
+    }, {
+      text: 'slideshow', url: '../slideshow/slideshow'
+    }, {
+      text: 'fragment', url: '../fragment/fragment'
+    }, {
+        text: 'embed', url: '../embed/embed'
     }]
     
   },

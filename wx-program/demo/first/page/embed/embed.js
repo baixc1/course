@@ -1,4 +1,4 @@
-// pages/load/load.js
+// page/embed/embed.js
 Page({
 
   /**

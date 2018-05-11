@@ -1,0 +1,49 @@
+/*swiper*/  
+.swiper-box {  
+  display: block;  
+  height: 100%;  
+  width: 100%;  
+  overflow: hidden;  
+}  
+.hot-box {  
+  display: block;  
+  height: 100%;  
+  font-family: Helvetica;  
+}  
+/* list */  
+.themes-list {  
+  background: #fff;  
+  display: block;  
+  margin-bottom: 20px;  
+}  
+.themes-list-box {  
+  display: block;  
+  position: relative;  
+  padding: 16px 20px;  
+  border-bottom: 1px solid #f2f2f2;  
+}  
+.themes-list-main {  
+  margin-left: 1px;  
+}  
+.themes-list-name {  
+  font-size: 14px;  
+  color: #444;  
+  height: 20px;  
+  line-height: 20px;  
+  overflow: hidden;  
+}  
+/*tab*/  
+.swiper-tab {  
+  display: flex;
+}  
+.swiper-tab-list {  
+  flex: auto;
+}  
+.swiper-tab-list view{
+  width:23px;
+  height:23px;
+  background: no-repeat center;
+}
+.active {  
+  color: #FFCC00;  
+}  

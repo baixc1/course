@@ -1,0 +1,14 @@
+<view class="swiper-container">  
+  <swiper autoplay="auto" interval="1000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">  
+    <block wx:for="{{slider}}" wx:key="*this">  
+      <swiper-item data-id="{{item.id}}" data-url="{{item.linkUrl}}">  
+        <image src="{{item.picUrl}}" class="img"></image>  
+      </swiper-item>  
+    </block>  
+  </swiper>  
+  <view class="dots">  
+    <block wx:for="{{slider}}" wx:key="*this">  
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}" bindtap="chuangEvent" id="{{index}}">{{index+1}}</view>  
+    </block>  
+  </view>  
+</view>  

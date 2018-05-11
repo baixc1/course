@@ -2,14 +2,41 @@
   "pages":[
     "pages/index/index",
     "pages/tabs/tabs",
-    "pages/loadmore/loadmore",
-    "pages/load/load",
     "pages/temp/temp",
-    "pages/request/request"
+    "pages/request/request",
+    "pages/components/components",
+    "pages/slideshow/slideshow",
+    "pages/fragment/fragment",
+    "pages/embed/embed"
   ],
   "window":{
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "first",
     "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/myselect.png",
+        "iconPath": "images/my.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/ssselect.png",
+        "iconPath": "images/ss.png",
+        "pagePath": "pages/request/request",
+        "text": "日志"
+      },
+      {
+        "selectedIconPath": "images/wpselect.png",
+        "iconPath": "images/wp.png",
+        "pagePath": "pages/tabs/tabs",
+        "text": "开心测试"
+      }
+    ]
   }
 }

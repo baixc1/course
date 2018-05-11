@@ -8,6 +8,9 @@
 6、cursor: pointer/default;		//手型/默认光标
 7、overflow: auto;				//设置滚动条(必须有高度), 负margin可隐藏滚动条
 8、outline: none;				//解决button点击后出现的框
+9、white-space: nowrap			//文本不进行换行
+10、transition: property duration..		//过渡
+11、font:	font-weight font-size/line-height font-family	
 
 *框模型*
 1、	margin: auto; 	对块标签元素有效，作用于自身

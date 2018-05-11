@@ -1,0 +1,70 @@
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 51}}px" bindchange="bindChange">  
+  
+  <!-- frag01 -->  
+  <swiper-item>  
+    <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">  
+  
+      <!-- 列表 -->  
+      <view class="themes-list">  
+        <view class="themes-list-box" wx:for="{{datalists}}">  
+          <view class="themes-list-main">  
+            <view class="themes-list-name">{{item}}</view>  
+          </view>  
+        </view>  
+      </view>  
+    </scroll-view>  
+  </swiper-item>  
+  
+  <!-- grag02 -->  
+  <swiper-item>  
+    <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">  
+  
+      <!-- 列表 -->  
+      <view class="themes-list">  
+        <view class="themes-list-box" wx:for="{{reslists}}">  
+          <view class="themes-list-main">  
+            <view class="themes-list-name">{{item}}</view>  
+          </view>  
+        </view>  
+      </view>  
+    </scroll-view>  
+  </swiper-item>  
+  
+  <!-- grag03 -->  
+  <swiper-item>  
+    <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">  
+  
+      <!-- 列表 -->  
+      <view class="themes-list">  
+        <view class="themes-list-box" wx:for="{{datalists}}">  
+          <view class="themes-list-main">  
+            <view class="themes-list-name">{{item}}</view>  
+          </view>  
+        </view>  
+      </view>  
+    </scroll-view>  
+  </swiper-item>  
+  
+  <!-- grag02 -->  
+  <swiper-item>  
+    <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">  
+  
+      <!-- 列表 -->  
+      <view class="themes-list">  
+        <view class="themes-list-box" wx:for="{{reslists}}">  
+          <view class="themes-list-main">  
+            <view class="themes-list-name">{{item}}</view>  
+          </view>  
+        </view>  
+      </view>  
+    </scroll-view>  
+  </swiper-item>  
+</swiper>  
+  
+<!--tab_top-->  
+<view class="swiper-tab">  
+  <view wx:for="{{4}}" class="swiper-tab-list {{currentTab==index ? 'active' : ''}}" data-current="{{index}}" bindtap="swichNav">  
+    <view style="background-image: url({{currentTab==index ? iconlists[index].focus: iconlists[index].normal}})"></view>  
+    <view>frag{{index+1+''}}</view>  
+  </view>  
+</view>  

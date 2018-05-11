@@ -30,12 +30,30 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
 					"name": "resquest",
 					"pathName": "pages/request/request",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "components",
+					"pathName": "pages/components/components",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "fragment",
+					"pathName": "pages/fragment/fragment",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "slideshow",
+					"pathName": "pages/fragment/fragment",
 					"query": ""
 				}
 			]

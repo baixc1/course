@@ -35,3 +35,14 @@ c、重写,bind/apply/call方法
 	</xml>
 	<![endif]-->
 	</head><body><table>{table}</table></body></html>'			//内容
+	
+	
+4、正则匹配不含特点字符串
+	^(?!.*(title|wrp)).*$
+	?:   ?= 和 ?!(预查)		//非捕获元
+	\r\n					//匹配换行
+	^ $						//整行	开始-结尾
+	.*要放在预查中
+	
+	
+	

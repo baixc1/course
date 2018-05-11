@@ -1,0 +1,99 @@
+<!--导航条-->  
+<view class="navbar">  
+  <text wx:for="{{navbar}}" wx:key="*this" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">{{item}}</text>  
+</view>  
+
+<view hidden="{{currentTab!==0}}">
+  <view class="section" wx:for="{{views}}">
+      <view class="section__title">{{item.text}}</view>
+      <view class="flex-wrp" style="{{item.style}}">
+          <view class="flex-item" wx:for="{{colors}}" style="{{item}}"></view>
+      </view>
+  </view>
+</view>
+
+<view hidden="{{currentTab!==1}}">
+    <!--垂直滚动，这里必须设置高度-->
+  <scroll-view scroll-y="true">
+      <view class="flex-item"  wx:for="{{colors}}" style="{{item}}"></view>
+  </scroll-view>
+  <!--水平滚动-->
+  <scroll-view scroll-x="true">
+    <view wx:for="{{colors}}" style="{{item}}"></view>
+  </scroll-view>
+</view>
+
+<!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件-->
+<swiper hidden="{{currentTab!==2}}" indicator-dots="true" autoplay="true" duration="1000" bindchange="listenSwiper" >
+<!--swiper-item只能包含一个节点再多会自动删除-->
+    <swiper-item wx:for="{{colors3}}" style="{{item}}"></swiper-item>
+</swiper>
+
+<view hidden="{{currentTab!==3}}">
+    <icon wx:for="{{icons}}" type="{{item.type}}" size="{{item.size}}"/>
+</view>
+
+<view wx:if="{{currentTab==4}}">
+  <progress percent="80" show-info="true" stroke-width="5" color="red" active="true"/>
+</view>
+
+<view hidden="{{currentTab!==5}}">
+  <!--视频组件src资源地址，binderror为监听错误信息-->
+  <video 
+      src="http://sdk.static.dongtu.com/@/promotion/1524033223330/20180418eyercbxg.mp4"
+      hidden="{{}}"
+      binderror="listenerVideo" />
+</view>
+
+<view hidden="{{currentTab!==6}}">
+  <switch class="wx-switch-input" type="switch" checked="true" bindchange="listenerSwitch"/>  <text>\n</text>
+  <switch type="checkbox" bindchange="listenerCheckboxSwitch" />
+</view>
+
+<view hidden="{{currentTab!==7}}">
+  <slider max="100" step="10" show-value="true" bindchange="listenerSlider"/>
+</view>
+
+<view hidden="{{currentTab!==8}}">
+  <radio-group bindchange="listenerRadioGroup">
+      <label style="display: flex" wx:for="{{radios}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+  </radio-group>
+</view>
+
+<view hidden="{{currentTab!=9}}">
+  <picker mode="selector" range="{{selects.list}}" value="{{selects.index}}" bindchange="listenerPickerSelected">
+      <text>{{'选:' + selects.list[selects.index]}}</text>
+  </picker>
+  <picker mode="time" value="{{selects.time}}" start="06:00" end="24:00" bindchange="listenerTimePickerSelected">
+      <text>{{'选:' + selects.time}}</text>
+  </picker>
+  <picker mode="date" value="{{selects.date}}" start="2016-09-26" end="2017-10-10" bindchange="listenerDatePickerSelected">
+      <text>{{'选:' + selects.date}}</text>
+  </picker>                                 
+</view>
+
+<view hidden="{{currentTab!=10}}">
+  <view class="inputView">
+    <input class="input" type="number" placeholder="请输入账号" placeholder-class="ph-red" bindinput="listenerPhoneInput" />
+  </view>
+
+  <view class="inputView">
+    <input class="input" password="true" placeholder="请输入密码" placeholder-style="color: green" bindinput="listenerPasswordInput"/>
+  </view>
+</view>
+
+<view hidden="{{currentTab!=11}}">
+  <checkbox-group bindchange="listenCheckboxChange">
+      <label style="display: flex;"  wx:for="{{checkboxs}}">
+          <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+  </checkbox-group> 
+</view>
+
+<view hidden="{{currentTab!=12}}">
+  <button type="defaule">Defalut</button>
+  <button type="primary" disabled="true" loading="true">Primary</button>
+  <button type="warn">warn</button>
+</view>
