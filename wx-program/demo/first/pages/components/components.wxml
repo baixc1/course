@@ -97,3 +97,7 @@
   <button type="primary" disabled="true" loading="true">Primary</button>
   <button type="warn">warn</button>
 </view>
+
+<view hidden="{{currentTab!=13}}">
+  <!--<web-view src="http://www.iqiyi.com/"></web-view>-->
+</view>

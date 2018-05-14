@@ -1,0 +1,41 @@
+<!document html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Promise</title>
+		
+		<script src="jquery-3.3.1.js"></script>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		const getJSON1 = function(url) {
+			const promise = new Promise(function(resolve, reject){
+			const handler = function() {
+			  if (this.readyState !== 4) {
+				return;
+			  }
+			  if (this.status === 200) {
+				resolve(this.response);
+			  } else {
+				reject(new Error(this.statusText));
+			  }
+			};
+			$.ajax({
+				url: 'http://i2.mediapower.mobi/adpower/vm/Bora/js/test.js',
+				dataType: 'jsonp'
+			});
+		  });
+
+		  return promise;
+		};
+
+		getJSON1("http://es6.ruanyifeng.com/#docs/promise").then(function(json) {
+		  console.log('Contents: ' + json);
+		}, function(error) {
+		  console.error('出错了', error);
+		});		
+	</script>
+	
+</html>

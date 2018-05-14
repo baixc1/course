@@ -1,13 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/tabs/tabs",
     "pages/temp/temp",
     "pages/request/request",
     "pages/components/components",
     "pages/slideshow/slideshow",
     "pages/fragment/fragment",
-    "pages/embed/embed"
+    "pages/api/api",
+    "pages/userInfo/userInfo"
   ],
   "window":{
     "navigationBarBackgroundColor": "#000",
@@ -23,19 +23,13 @@
         "selectedIconPath": "images/myselect.png",
         "iconPath": "images/my.png",
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "frame"
       },
       {
         "selectedIconPath": "images/ssselect.png",
         "iconPath": "images/ss.png",
-        "pagePath": "pages/request/request",
-        "text": "日志"
-      },
-      {
-        "selectedIconPath": "images/wpselect.png",
-        "iconPath": "images/wp.png",
-        "pagePath": "pages/tabs/tabs",
-        "text": "开心测试"
+        "pagePath": "pages/api/api",
+        "text": "api"
       }
     ]
   }

@@ -40,9 +40,32 @@ app.js		//全局配置,pages、window、tabBar、networkTimeout、debug
 			冒泡事件	//touchstart、touchmove、tap...
 			非冒泡事件
 		事件绑定和冒泡	//bind或catch+事件   value
+		事件对象
+			BaseEvent
+			CustomEvent 
+			TouchEvent 
+	引用			//import和include
+2、WXS
+	WXS 模块			//<wxs> 标签、.wxs 文件、module 对象、require函数
+	...
+3、WXSS
+	尺寸单位		//rpx
+	样式导入		//@import
+	选择器
+	flex布局
 		
+			
 		
 ***自定义组件***
+1、组件模版和样式
+	组件模版
+	组件wxml的slot
+	组件样式
+	外部样式类
+2、Component构造器
+	...
+
+
 1、类似page,json声明component: true
 2、注册: Component()
 3、使用时json引用,usingComponent
@@ -56,3 +79,5 @@ Component({
   data: {}, // 私有数据，可用于模版渲染
   methods: { }
 })
+
+

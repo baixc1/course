@@ -1,4 +1,12 @@
 ***网络***
+
+服务器
+1、通迅域名			//https(request)、uploadFile、downloadLoad、WebSocket(connectSocket)
+2、配置			//小程序后台-设置-开发设置-服务器域名
+3、HTTPS证书
+4、跳过域名校验
+
+
 发起请求
 1、wx.request
   wx.request({
@@ -8,7 +16,9 @@
 	header: '',
 	success: function (res) {}
   })
-
+2、获取特殊信息 			//request请求(服务器返回手机号,openid)
+code -> openid
+openid -> phoneNo
   
   
 ***媒体***
@@ -90,6 +100,14 @@ wx.getUserInfo({
     var userInfo = res.userInfo
   }
 })
+4、授权
+	wx.authorize({
+		scope: '',
+		success() {}
+	})
+	wx.getSetting()		//获取授权信息
+	wx.openSetting()	//已授权页面
+
 
 
 ***页面***

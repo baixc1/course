@@ -41,8 +41,7 @@ Page({
    * 滑动切换tab 
    */
   bindChange: function (e) {
-    var that = this;
-    that.setData({ currentTab: e.detail.current });
+    this.setData({ currentTab: e.detail.current });
   },
   /** 
    * 点击切换tab 

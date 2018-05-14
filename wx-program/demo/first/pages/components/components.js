@@ -1,7 +1,7 @@
 // pages/components/components.js
 Page({
   data: {
-    navbar: ['view', 'scroller-view', 'swipe', 'icon', 'progress', 'video', 'switch', 'slider', 'radio', 'selector', 'input', 'checkbox', 'button'],
+    navbar: ['view', 'scroller-view', 'swipe', 'icon', 'progress', 'video', 'switch', 'slider', 'radio', 'selector', 'input', 'checkbox', 'button', 'web-view'],
     currentTab: 8,
     views: [{ text: 'flex-direction: row', style: 'flex-direction:row' }, { text: 'flex-direction: column', style: 'height: 300px;flex-direction:column' }, { text: 'justify-content: flex-start', style: 'flex-direction:row;justify-content: flex-start' }, { text: 'justify-content: flex-end', style: 'flex-direction:row;justify-content: flex-end' }, { text: 'justify-content: center', style: 'justify-content: center' }, { text: 'justify-content: space-between', style: 'justify-content: space-between' }, { text: 'justify-content: space-around', style: 'justify-content: space-around' }, { text: 'align-items: flex-end', style: 'height: 200px;align-items: flex-end' }, { text: 'align-items: center', style: 'height: 200px;align-items: center' }, { text: 'align-items: flex-start', style: 'height: 200px;align-items: flex-start' }],
     colors: ['background: red', 'background: green', 'background: blue', 'background: yellow'],
@@ -10,7 +10,7 @@ Page({
     radios: [{ name: 'Jave', value: 'Android', checked: 'true' }, { name: 'Object-C', value: 'IOS' }, { name: 'jsx', value: 'ReactNative' }, { name: 'js', value: 'WeChat' }, { name: 'Python', value: 'Web' }],
     selects: {
       list: ['Android', 'IOS', 'ReactNativ', 'WeChat', 'Web'],
-      index: 0,
+      index: 1,
       time: '08:30',
       date: '2016-09-26',
     },
@@ -25,9 +25,9 @@ Page({
     ]
   },
   onLoad(){
-    this.setData({
+   /* this.setData({
       currentTab: this.data.navbar.length - 1
-    })
+    })*/
   },
   navbarTap: function (e) {
     this.setData({

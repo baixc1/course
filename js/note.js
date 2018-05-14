@@ -44,5 +44,6 @@ c、重写,bind/apply/call方法
 	^ $						//整行	开始-结尾
 	.*要放在预查中
 	
-	
-	
+5、console.log
+	可使用pirntf()风格的占位符(%d/%s/%o..)		//console.log("圆周率是%f",3.1415926);
+	打印字符串+对象								//console.log('o',{a:1})
