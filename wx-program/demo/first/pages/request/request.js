@@ -5,12 +5,30 @@ Page({
     page: 1,
     pageNum: 15,
     state: true,
-    refresh: true
+    refresh: true,
+    slider: [],
+    swiperCurrent: 0
   },
   onLoad(){
-    this.loadData()
+    this.loadData()   //加载更多或刷新
+    var that = this;
+    util.getSlideshow(function (data) {//获取轮播图的图片  
+      that.setData({
+        slider: data.data.slider
+      })
+    });
   },
-  loadData(){
+  swiperChange: function (e) {    //轮播图滑动事件
+    this.setData({
+      swiperCurrent: e.detail.current
+    })
+  },
+  chuangEvent: function (e) {     //点击小圆点，切花轮播图
+    this.setData({
+      swiperCurrent: e.currentTarget.id
+    })
+  },
+  loadData(){                 //pull down or up
     var d = this.data
     if(!d.state) return       //no data
     var me = this
@@ -40,7 +58,7 @@ Page({
       }
     })
   },
-  onPullDownRefresh(){
+  onPullDownRefresh(){      //pull down
     this.data.state = true
     wx.showNavigationBarLoading()
     this.data.page = 1;
@@ -48,7 +66,7 @@ Page({
     this.loadData()
     wx.hideNavigationBarLoading()  
   },
-  onReachBottom(){
+  onReachBottom(){        //pull up
     if (this.data.state) {
       this.setData({
         page: this.data.page + 1,  // 每次触发上拉事件，把pageNum+1  

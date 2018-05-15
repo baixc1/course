@@ -1,6 +1,6 @@
 ***配置***
 app.js		//全局配置,pages、window、tabBar、networkTimeout、debug
-
+page.json	//只配置app.json中的window项
 
 ***逻辑层***
 1、注册程序 App()   		//onLaunch、onShow、onHide、onError、onPageNotFound、其他
@@ -33,7 +33,7 @@ app.js		//全局配置,pages、window、tabBar、networkTimeout、debug
 1、WXML
 	数据绑定		//组件属性、控制属性、关键字
 	列表渲染		//wx-for'指令',默认index,item    block  wx:key 
-	条件渲染		//if(hidden)	block 	
+	条件渲染		//if(hidden)	block(包装元素, 常用于if/list) 	
 	模板			//定义(name)<template>、使用(is、data)、模板作用域
 	事件			
 		事件分类
@@ -41,7 +41,7 @@ app.js		//全局配置,pages、window、tabBar、networkTimeout、debug
 			非冒泡事件
 		事件绑定和冒泡	//bind或catch+事件   value
 		事件对象
-			BaseEvent
+			BaseEvent		//target-触发事件源组件,currentTarget-事件绑定组件, data-set 自定义属性集合
 			CustomEvent 
 			TouchEvent 
 	引用			//import和include
@@ -81,3 +81,9 @@ Component({
 })
 
 
+
+***兼容***
+1、判断
+	wx.getSystemInfo
+	wx.getSystemInfoSync
+	wx.canIUse

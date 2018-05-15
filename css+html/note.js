@@ -11,6 +11,8 @@
 9、white-space: nowrap			//文本不进行换行
 10、transition: property duration..		//过渡
 11、font:	font-weight font-size/line-height font-family	
+12、absolute定位				//相对于非static定位的父元素(可用relative撑开父元素高度)
+13、image居中					//display: block; margin: 0 auto;
 
 *框模型*
 1、	margin: auto; 	对块标签元素有效，作用于自身

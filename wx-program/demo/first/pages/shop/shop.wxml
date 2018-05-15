@@ -1,0 +1,28 @@
+<!--主盒子-->  
+<view class="container">  
+  <!--左侧栏-->  
+  <view class="nav_left">  
+    <view wx:for="{{navLeftItems}}" class="nav_left_items {{curIndex == index && 'active'}}" bindtap="switchRightTab" data-index="{{index}}">
+      {{item.tree.desc}}
+    </view>  
+  </view>  
+  <!--右侧栏-->  
+  <view class="nav_right">  
+    <!--如果有数据，才遍历项-->  
+    <block wx:if="{{list.length}}" >  
+        <view wx:for="{{list}}" class="nav_right_items" >  
+          <image src="{{item.tree.logo || 'http://temp.im/50x30'}}"></image>
+          <view >{{item.tree.desc ||item.tree.desc2 }}</view>  
+        </view>  
+    </block>  
+    <!--如果无数据，则显示数据-->  
+    <view wx:else>暂无数据</view>  
+  </view>  
+</view> 
+
+<view class="menu-wrp">  
+  <view class="menu-list" wx:for="{{menu.imgUrls}}">  
+    <image class="menu-img" src="{{item}}" />  
+    <view class="menu-desc">{{menu.descs[index]}}</view>  
+  </view>  
+</view>  

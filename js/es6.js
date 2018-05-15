@@ -15,3 +15,9 @@ Promise 对象
 	}, function(error) {
 	  // failure
 	});
+4、Promise.prototype.then(suc,fail)			//then在异步调用执行完后执行	链式调用   返回Promise对象
+5、Promise.prototype.catch()				//返回Promise对象	捕获对应promise链上异常
+6、Promise.all(arr)							//全部成功为fulfilled
+7、Promise.race()							//去最快的状态改变
+8、Promise.resolve()						//返回Promise对象, fulfilled
+9、Promise.reject()							//同上

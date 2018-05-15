@@ -1,10 +1,11 @@
 Page({
   data: {
     list: [{
-      text: 'userInfo', url: '../userInfo/userInfo'
+      text: 'shop', url: '../shop/shop'
     }]
+
   },
   changePage: function (e) {
     wx.navigateTo({ url: e.target.dataset.url })
-  },
+  }
 }) 

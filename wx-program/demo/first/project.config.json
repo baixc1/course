@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -51,15 +51,15 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "slideshow",
-					"pathName": "pages/fragment/fragment",
+					"id": 3,
+					"name": "advance",
+					"pathName": "pages/advance/advance",
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "demo",
-					"pathName": "pages/demo/demo",
+					"id": 4,
+					"name": "shop",
+					"pathName": "pages/shop/shop",
 					"query": ""
 				},
 				{

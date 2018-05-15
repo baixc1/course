@@ -1,8 +1,36 @@
-/* pages/request/request.wxss */
-.main{
+/* pull up or down */
+.pull{
   margin-top: 30rpx;
   text-align: center;
 }
-.main view{
+.pull view{
   height: 80rpx;
 }
+
+/* swiper */
+.swiper-container{  
+  position: relative;  
+}  
+.swiper-container .swiper .img{  
+  width: 100%;  
+}  
+.swiper-container .dots{  
+  position: absolute;  
+  right: 40rpx;  
+  bottom: 20rpx;  
+  display: flex;  
+}  
+.swiper-container .dots .dot{  
+  margin: 0 10rpx;  
+  width: 28rpx;  
+  height: 28rpx;  
+  background: #fff;  
+  border-radius: 50%;  
+  transition: background-color .6s;  
+  font: 300 18rpx/28rpx "microsoft yahei";  
+  text-align: center;  
+}  
+.swiper-container .dots .dot.active{  
+  background-color: #f80;  
+  color:#fff;  
+}  

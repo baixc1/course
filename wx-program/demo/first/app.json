@@ -4,14 +4,13 @@
     "pages/temp/temp",
     "pages/request/request",
     "pages/components/components",
-    "pages/slideshow/slideshow",
     "pages/fragment/fragment",
-    "pages/api/api",
-    "pages/userInfo/userInfo"
+    "pages/advance/advance",
+    "pages/shop/shop"
   ],
   "window":{
     "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "first",
+    "navigationBarTitleText": "basis",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -23,13 +22,13 @@
         "selectedIconPath": "images/myselect.png",
         "iconPath": "images/my.png",
         "pagePath": "pages/index/index",
-        "text": "frame"
+        "text": "basis"
       },
       {
         "selectedIconPath": "images/ssselect.png",
         "iconPath": "images/ss.png",
-        "pagePath": "pages/api/api",
-        "text": "api"
+        "pagePath": "pages/advance/advance",
+        "text": "advance"
       }
     ]
   }
