@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../../jquery/jquery-3.3.1/jquery-3.3.1.js"></script>
+	<style>
+		textarea{
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="btn" onclick="getText()">获取数据</div>
+        <textarea class="text" readonly></textarea >
+    </div>
+
+</body>
+
+<script type="text/javascript">
+
+    function getText(){
+        $.get('http://127.0.0.1:8081/process_get',function(d){
+			$('.text').text(d);
+		},'jsonp')
+    }
+
+</script>
+
+</html>

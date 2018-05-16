@@ -21,8 +21,8 @@
 </view> 
 
 <view class="menu-wrp">  
-  <view class="menu-list" wx:for="{{menu.imgUrls}}">  
-    <image class="menu-img" src="{{item}}" />  
-    <view class="menu-desc">{{menu.descs[index]}}</view>  
+  <view class="menu-list" wx:for="{{menu}}">  
+    <image class="menu-img" src="{{item.imgUrls}}" />  
+    <view class="menu-desc">{{item.descs}}</view>  
   </view>  
 </view>  

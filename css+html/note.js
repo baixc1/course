@@ -70,7 +70,7 @@
 	c、fillText的fillStyle不能和fill一样
 	d、fillText计算位置 x+r*cos(angle)
 	f、旋转起始位置可用-90开始
-	
+4、textarea				//多行的文本输入控件
 
 ***浏览器***
 *加载、解析、渲染*

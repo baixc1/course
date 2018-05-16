@@ -10,5 +10,5 @@
 
 *ajax*
 $.ajax(url,settings);		//注意跨域问题,url,data,fun或{url:'',data:{},success:(){}}
-$.get(url,data,fun);
+$.get(url,data,fun,'json');		//转json对象
 $.post(url,data,fun);					

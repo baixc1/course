@@ -1,5 +1,5 @@
 Hypertext Preprocessor
-1、服务器端脚本
+1、服务器端脚本				//收取数据, 操作数据库和文件、加密, 生成动态页面
 2、运行：服务器组件（WampServer, XAMPP）
 3、IDE （Eclipse for PHP）
 4、语法
