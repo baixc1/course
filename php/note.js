@@ -7,7 +7,7 @@ Hypertext Preprocessor
 	输出指令: echo(可输出任意个字符串), print(输出一个字符串,返回1)
 	.号: 连接符, .=: 连续(类似js + ) 
 	@错误控制运算符
-5、	变量: $变量名
+5、	变量: $变量名		//$var='';		无变量声明命令
 	弱类型
 	变量作用域: local, global($GLOBAL[index]), static, parameter
 6、定界符EOF: 定义字串方法
@@ -24,7 +24,8 @@ Hypertext Preprocessor
 	换行: "\n"
 	转义字符: "\"
 10、array()
-	数值数组、关联数组array(''=>'',..)、多维数组
+	数值数组、关联数组、多维数组			
+	创建数据: array()		//array("Volvo","BMW","Toyota");   array(''=>'',..);   $cars[0]="Volvo";
 	count()
 	for循环, foreach(arr as val/key=>val)循环
 	
@@ -41,8 +42,8 @@ Hypertext Preprocessor
 	__FILE__: 文件的完整路径和文件名
 	, __DIR__, __FUNCTION__, __CLASS__, __METHOD__, __NAMESPACE__
 14、命名空间
-	namespace xx\xxx 划分全局下的领域
-	use 使用命名空间中的*类名*
+	namespace xx\xxx 划分全局下的领域						//同一namespace下的成员可以互相访问(不同文件)
+	use 使用命名空间中的*类名*								//不同namespace的use导入后可直接使用(不用加前缀)
 	作用: 1、类、函数、常量名字冲突 2、提供别名, 提高代码可读性
 	use class 引入类库
 15、对象
@@ -60,10 +61,13 @@ Hypertext Preprocessor
 	static
 	final
 16、函数
+	函数定义和调用			//类似js, 类成员调用使用 -> , 参数和变量都以$开头
+	
+	常用内置函数:
 	define/defined;		//定义/检测常量
 	is_array();		//是-1
 	extract;		//提取变量
-	str_replace(find,replace,str) //替换
+	str_replace(find,replace,str) //替换全部
 	isset			//检测变量是否定义且不为NULL
 	empty 			//等价于 !isset($var) || $var == false
 	intval			//获取变量的整数值
@@ -77,6 +81,7 @@ $_SERVER('PATH_INFO');	//url中脚本之后的路径
 ***advanced course***
 PHP包含
 	include,require(错误中断) : 引用页头、公用文件、变量
+	语法: include/require 'filename';
 PHP JSON
 	json_encode json_decode
 	

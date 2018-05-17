@@ -11,7 +11,9 @@
 	新建自定义标签类, 继承Think\Template\TagLib
 6、数组越界报错解决 isset($arr[key])
 7、thinkphp中, .= 左值未定义会报错, 但是不影响程序的执行
-
+8、服务器根目录改变时(根目录下不是源项目子文件, 而是许多项目)
+		图片路径不对				//最易更改图片源路径
+		href跳转(如首页 href="/")	//修改后台数据
 
 
 
@@ -41,7 +43,9 @@ d)url请求Think\Dispatcher
 
 ***html模板引擎初始化***
 入口文件
-	require()
+	require 'filename';
+	
+Core\ThinkPHP.php ->
 
 Think\Think
 	start()
@@ -134,9 +138,12 @@ L方法  获取和设置语言定义(不区分大小写)
 	$this->display();输出模板文件
 		默认参数: TPL/模板默认主题/默认模块名/操作名+模板后缀
 		继承调用, 子类可重载该方法
-	$this->assign('name',$val);模板变量赋值
+	$this->assign('name',$val);			//模板变量赋值	可用$this->name 访问
 	index控制器模块获取数据
-	
+
+内置标签
+	Foreach标签		
+		<foreach name="list" item="vo" >{$vo}</foreach>	  //name表示数据源 item表示循环变量		支持标签嵌套
 	
 *连贯操作*
 1、实例化对象	M();指定表名

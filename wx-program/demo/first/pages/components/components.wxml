@@ -96,6 +96,8 @@
   <button type="defaule">Defalut</button>
   <button type="primary" disabled="true" loading="true">Primary</button>
   <button type="warn">warn</button>
+
+  <button open-type="share">转发</button>
 </view>
 
 <view hidden="{{currentTab!=13}}">

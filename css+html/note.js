@@ -17,6 +17,8 @@
 *框模型*
 1、	margin: auto; 	对块标签元素有效，作用于自身
 2、text-align: center; 	对行内元素/文本有效，作用域子元素
+3、文字对于box上下对齐布局			//line-height等于font-size
+4、width: max-content				//自适应内部元素
 	
 *选择器*
 1、nth-child(n)  	先找某元素的父元素，然后找第n个(递归查找)子元素且元素必须为原元素
@@ -42,6 +44,10 @@
 		flex-grow: 1;				//平分剩余空间
 		flex: 1;					//剩余空间所占比例, 可为小数
 	}
+3、过度
+	transition: transform 2s;		//设置css属性的过度动画
+4、平移
+	transform: translate('10px');	//css变换: 移动到坐标轴的指定位置
 
 
 ***html***
