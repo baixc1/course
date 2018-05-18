@@ -48,6 +48,10 @@
 	transition: transform 2s;		//设置css属性的过度动画
 4、平移
 	transform: translate('10px');	//css变换: 移动到坐标轴的指定位置
+5、translate和overflow:scroll;		//合用可能出现bug, translate-translate移动, scroll-scrollLeft移动
+	
+	
+	
 
 
 ***html***
@@ -77,6 +81,7 @@
 	d、fillText计算位置 x+r*cos(angle)
 	f、旋转起始位置可用-90开始
 4、textarea				//多行的文本输入控件
+5、禁止选中文字			// 父元素加onselectstart="return false"
 
 ***浏览器***
 *加载、解析、渲染*

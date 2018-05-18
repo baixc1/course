@@ -3,10 +3,11 @@
 
 *效果*
 1、$(selector).toggle(); 	切换元素可见状态
+2、$(seletor).animate({height:"300px"});		//可替代css过渡
 
-*CSS*
-尺寸
-	width([val/fn])
+*HTML/CSS*
+$(selector).width([val/fn])		//尺寸
+$(selector).scrollLeft()		//设置或获取距离
 
 *ajax*
 $.ajax(url,settings);		//注意跨域问题,url,data,fun或{url:'',data:{},success:(){}}

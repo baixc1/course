@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>swiper</title>
+		<style>
+			body{
+				width: 2000px;
+			}
+			.main{
+				margin: 100px auto;
+				padding: 30px;
+				width: 600px;
+				height: 400px;
+				overflow: hidden;
+				border: 1px solid #ddd;
+			}
+			.sub{
+				background: red;
+				height: 400px;
+				width: 300px;
+			}
+		</style>
+		<script src="jquery-3.3.1.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="sub"></div>
+		</div>
+	</body>
+	<script>
+		var $swiper = $(".sub"),
+			state = false,		//是否是mousedown的状态
+			startX,
+			moveX=0;
+		$swiper.on({
+			mousedown(e){
+				state = true;
+				x = e.pageX;		//初始化鼠标位置
+			},
+			mousemove(e){
+				if(!state) return;
+				e = e || window.event;		//兼容ie和firefox
+	            translate(moveX+=e.pageX-x);
+	            x = e.pageX;
+			},
+			mouseup(e){
+				state = false;
+			},
+			mouseleave(e){
+				state = false;
+			}
+		});
+		
+		function translate(x){
+			console.log(x);
+			$swiper.css('transform','translate(' + x + 'px)');
+		}
+	</script>
+</html>

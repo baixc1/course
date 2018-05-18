@@ -49,3 +49,22 @@ c、重写,bind/apply/call方法
 	打印字符串+对象								//console.log('o',{a:1})
 	
 6、new Error('错误对象')			//定义错误对象
+
+
+7、事件对象e
+	e = e || window.event;		//兼容ie和firefox
+	screenX 		//相对桌面左侧距离, 浏览器窗口可拖动
+	clientX			//相对于浏览器左侧距离, 文档滚动不影响
+	pageX 			//相对于文档左侧距离
+	
+8、HTML DOM Element属性
+	clientWidth	 	//元素的可见宽度(不含border)
+	offsetWidth		//元素的宽度(box盒子模型)
+	offsetLeft		//元素水平偏移位置(position)
+	scrollLeft		//元素左边缘与视图之间的距离(用于overflow, 从左边起拉动滚动条的距离)
+	scrollWidth		//元素的整体宽度(=clientWidth, 除ie7)
+	
+	document.documentElement.scrollTop		//firefox 、webkit
+	document.body.scrollTop					//ie, safari
+	
+	scrollTop+clientHeight=height

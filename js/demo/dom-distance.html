@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>Javascript</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				font: 12px/2 Arial;
+				background-color: #ccc;
+				padding: 20px;
+			}
+			
+			#b1 {
+				width: 300px;
+				height: 220px;
+				background-color: #fff;
+				position: relative;
+				overflow: auto;
+				border: 10px solid #999;
+				padding: 10px;
+			}
+			
+			#b2 {
+				width: 220px;
+				height: 330px;
+				background-color: orange;
+				border: 10px solid #085A90;
+				padding: 10px;
+				position: relative;
+				left: 140px;
+				top: 90px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="b1">
+			<div id="b2"></div>
+		</div>
+		<script>
+			window.onload = function() {
+				var oB1 = document.getElementById('b1');
+				console.log("offsetWidth=" + oB1.offsetWidth, "offsetHeight=" + oB1.offsetHeight);
+				console.log("clientWidth=" + oB1.clientWidth, "clientHeight=" + oB1.clientHeight);
+				console.log("offsetLeft=" + oB1.offsetLeft, "offsetTop=" + oB1.offsetTop);
+				console.log("scrollWidth=" + oB1.scrollWidth, "scrollHeight=" + oB1.scrollHeight);
+				console.log("scrollLeft=" + oB1.scrollLeft, "scrollTop=" + oB1.scrollTop);
+			}
+		</script>
+	</body>
+
+</html>
