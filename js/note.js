@@ -37,12 +37,17 @@ c、重写,bind/apply/call方法
 	</head><body><table>{table}</table></body></html>'			//内容
 	
 	
-4、正则匹配不含特点字符串
-	^(?!.*(title|wrp)).*$
-	?:   ?= 和 ?!(预查)		//非捕获元
-	\r\n					//匹配换行
-	^ $						//整行	开始-结尾
-	.*要放在预查中
+4、正则
+	正则匹配不含特点字符串
+		^(?!.*(title|wrp)).*$
+		?:   ?= 和 ?!(预查)		//非捕获元
+		\r\n					//匹配换行
+		^ $						//整行	开始-结尾
+		.*要放在预查中
+	
+	^(1.*)\n					//配置1开头\n换行的整行
+	
+	
 	
 5、console.log
 	可使用pirntf()风格的占位符(%d - 整数/%s - 字符/%o - 对象/%f - 浮点数..)		//console.log("圆周率是%f",3.1415926);
@@ -68,3 +73,6 @@ c、重写,bind/apply/call方法
 	document.body.scrollTop					//ie, safari
 	
 	scrollTop+clientHeight=height
+	
+9、字符串
+	'\.'		//字符串中的\转义不能单独使用
