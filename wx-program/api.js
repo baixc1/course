@@ -6,6 +6,9 @@
 3、HTTPS证书
 4、跳过域名校验
 
+*上传、下载*
+1. wx.uploadFile(OBJECT)
+2. wx.downloadFile(OBJECT)
 
 发起请求
 1、wx.request
@@ -80,7 +83,7 @@ wx.showActionSheet({
 
 
 ***开放接口***
-登录
+*登录*
 1、wx.login		获取临时登录凭证(code)
 wx.login({
   success: function(res) {
@@ -108,7 +111,23 @@ wx.getUserInfo({
 	wx.getSetting()		//获取授权信息
 	wx.openSetting()	//已授权页面
 
+*转发*
+1. onShareAppMessage(options){return {}}			//设置转发信息, return-自定义转发字段
+	options 	-from  -target			//button、menu
+	return		-title 	-path 	-imageUrl		
+2. wx.showShareMenu(OBJECT)					//转发按钮
+	-withShareTicket	-success..
+3. wx.hideShareMenu(OBJECT)			//隐藏转发按钮
+4. wx.updateShareMenu(OBJECT)
+5. wx.getShareInfo(OBJECT)			//获取转发详细信息
+6. 获取更多转发信息
+	在 App.onLaunch() 或 App.onShow 获取到一个 shareTicket
+	wx.getShareInfo(shareTicket) 
+7. 页面内发起转发
+	<button open-type="share">		//触发 Page.onShareAppMessage		去掉默认样式  plain="true"
+	
 
+	
 
 ***页面***
 交互反馈

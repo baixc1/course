@@ -1,5 +1,9 @@
 <!--导航条-->  
 <view class="main">  
   <button wx:for="{{list}}" data-url="{{item.url}}" bindtap="changePage">{{item.text}}</button>  
+  <button open-type="share">转发share</button> 
+  <button bindtap='makeImg'>转发朋友圈</button>
 </view>  
-  
+<view class="canvas-box">
+  <canvas canvas-id="myCanvas" style="width:100%;height:{{windowHeight}}px;"></canvas>
+</view>

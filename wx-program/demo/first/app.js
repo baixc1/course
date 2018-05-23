@@ -28,7 +28,11 @@ App({
       }
     })
   },
+  onShow: function(obj){
+    var shareTicket = wx.getShareInfo({'shareTicket': obj.shareTicket}) 
+  },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    wx: wx
   }
 })

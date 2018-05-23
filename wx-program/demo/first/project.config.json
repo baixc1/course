@@ -1,7 +1,7 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -67,6 +67,18 @@
 					"name": "api",
 					"pathName": "pages/api/api",
 					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "share0",
+					"pathName": "pages/advance/advance",
+					"query": "",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群1",
+						"shareName": "0iSMjB2bKnTPFgwsForNyGtubZgV_rFZz8J2nUOPwCs@cr4dev",
+						"shareKey": "hU73wrRJN8NF3MpRZlSpnXiMLf1MjWgLDOkMLHfQ00T-x4fOobY-t2dhHIsexYJ3UAC3LZnxYoU-J3jwnIflzA~~"
+					}
 				}
 			]
 		}
