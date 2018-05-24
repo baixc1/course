@@ -66,3 +66,14 @@ video{
 .ph-red{
   color: blueviolet;
 }
+
+.navbar-btn{
+  margin-top: 20rpx;
+}
+.navbar-btn button{
+  border: none;
+}
+.navbar-btn image{
+  width: 100rpx;
+  height: 100rpx;
+}

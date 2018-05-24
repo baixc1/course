@@ -37,14 +37,47 @@ Page({
     wx.downloadFile({
       url: d.url,
       success(res){
-        that.drawImage();
+        console.log(res)
+        me.drawImage(res.tempFilePath);
+      },
+      fail(res){
+        console.log(res)
       }
     })
   },
-  drawImage(){
+  drawImage(img){
     const ctx = wx.createCanvasContext('myCanvas')
+    var bgPath = '../../../images/ss.png'
+    var w = wx.getSystemInfoSync().windowWidth  
+    var scale = 1.6
     //绘制背景图片
-    ctx.drawImage(bgPath, 0, 0, windowWidth, 1.6 * windowWidth)
+    ctx.drawImage(bgPath, 0, 0, w, scale * w)
+    ctx.arc(w / 2, 0.32 * w, 0.15 * w, 0, 2 * Math.PI)
+    ctx.clip()
 
+    //绘制二维码
+    ctx.save()
+    ctx.drawImage(img, 0.64 * w / 2, 0.75 * w, 0.36 * w, 0.36 * w)
+
+    wx.canvasToTempFilePath({
+      x: 0,
+      y: 0,
+      width: w,
+      height: w * scale,
+      destWidth: w * 4,
+      destHeight: w * 4 * scale,
+      canvasId: 'myCanvas',
+      success: function (res) {
+        console.log('朋友圈分享图生成成功:' + res.tempFilePath)
+        wx.previewImage({
+          current: res.tempFilePath, // 当前显示图片的http链接
+          urls: [res.tempFilePath] // 需要预览的图片http链接列表
+        })
+      },
+      fail: function (err) {
+        console.log('失败')
+        console.log(err)
+      }
+    })
   }
 }) 

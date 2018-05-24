@@ -103,3 +103,16 @@
 <view hidden="{{currentTab!=13}}">
   <!--<web-view src="http://www.iqiyi.com/"></web-view>-->
 </view>
+
+<view hidden="{{currentTab!=14}}" class="navbar navbar-btn">
+  <form bindsubmit="formSubmit" report-submit="true">
+    <button wx:for="{{checkboxs}}" formType="submit" class="item" plain="true" data-index="{{index}}">
+      <image src="https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2018-05-23/99017f2fd507b69d42775c21990e24fd.jpg"></image>
+      <view>{{item.name}}</view>
+    </button>
+  </form>
+</view>
+
+<view hidden="{{currentTab!=15}}">
+  <canvas canvas-id="myCanvas"></canvas>
+</view>

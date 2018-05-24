@@ -4,6 +4,27 @@
 
 const headerMenuConfig = [];
 
-const asideMenuConfig = [];
+const asideMenuConfig = [
+  {
+    name: 'Nav3',
+    path: '/page3',
+    icon: 'home',
+  },
+  {
+    name: 'Nav4',
+    path: '/page4',
+    icon: 'home',
+  },
+  {
+    name: 'Nav4',
+    path: '/page4',
+    icon: 'home',
+  },
+  {
+    name: 'Nav5',
+    path: '/page5',
+    icon: 'home',
+  },
+];
 
 export { headerMenuConfig, asideMenuConfig };

@@ -52,7 +52,7 @@ wx.setStorageSync 同步缓存
 
 
 ***界面***
-设置导航条
+*设置导航条
 1、wx.setNavigationBarColor
 wx.setNavigationBarColor({
     frontColor: '#ffffff',
@@ -64,6 +64,8 @@ wx.setNavigationBarColor({
 })
 2、wx.setNavigationTitle
 
+*绘图
+wx.canvasToTempFilePath(OBJECT, this)		//画布导出图片, 返回文件路径
 
 
 
@@ -126,8 +128,9 @@ wx.getUserInfo({
 7. 页面内发起转发
 	<button open-type="share">		//触发 Page.onShareAppMessage		去掉默认样式  plain="true"
 	
-
-	
+*模板消息*
+1. 使用
+	-获取模板ID
 
 ***页面***
 交互反馈

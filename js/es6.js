@@ -1,5 +1,4 @@
-Promise 对象
-*总览
+*Promise 对象
 1、异步编程
 2、避免了层层嵌套回调函数
 3、语法
@@ -21,3 +20,14 @@ Promise 对象
 7、Promise.race()							//去最快的状态改变
 8、Promise.resolve()						//返回Promise对象, fulfilled
 9、Promise.reject()							//同上
+
+*import 命令
+	eg: import {a as b} from './xxx.js'
+	-加载模块(文件)
+	-变量名称相同(a)
+	-只读
+	-.js后缀可以省略
+	
+*export default 命令
+	-为模块指定默认输出
+	-import不使用大括号

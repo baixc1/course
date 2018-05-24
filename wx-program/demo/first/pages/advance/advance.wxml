@@ -5,5 +5,5 @@
   <button bindtap='makeImg'>转发朋友圈</button>
 </view>  
 <view class="canvas-box">
-  <canvas canvas-id="myCanvas" style="width:100%;height:{{windowHeight}}px;"></canvas>
+  <canvas canvas-id="myCanvas"></canvas>
 </view>

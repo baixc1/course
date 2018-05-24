@@ -4,6 +4,11 @@
 
 import BlankLayout from './layouts/BlankLayout';
 import Home from './pages/Home';
+import Page3 from './pages/Page3';
+import HeaderAsideFooterResponsiveLayout from './layouts/HeaderAsideFooterResponsiveLayout';
+import HeaderAsideFooterLayout from './layouts/HeaderAsideFooterLayout';
+import Page4 from './pages/Page4';
+import Page5 from './pages/Page5';
 import NotFound from './pages/NotFound';
 
 const routerConfig = [
@@ -11,6 +16,21 @@ const routerConfig = [
     path: '/',
     layout: BlankLayout,
     component: Home,
+  },
+  {
+    path: '/page3',
+    layout: HeaderAsideFooterResponsiveLayout,
+    component: Page3,
+  },
+  {
+    path: '/page4',
+    layout: HeaderAsideFooterLayout,
+    component: Page4,
+  },
+  {
+    path: '/page5',
+    layout: HeaderAsideFooterLayout,
+    component: Page5,
   },
   {
     path: '*',

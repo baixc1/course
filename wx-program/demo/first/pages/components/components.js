@@ -1,8 +1,8 @@
 // pages/components/components.js
 Page({
   data: {
-    navbar: ['view', 'scroller-view', 'swipe', 'icon', 'progress', 'video', 'switch', 'slider', 'radio', 'selector', 'input', 'checkbox', 'button', 'web-view'],
-    currentTab: 12,
+    navbar: ['view', 'scroller-view', 'swipe', 'icon', 'progress', 'video', 'switch', 'slider', 'radio', 'selector', 'input', 'checkbox', 'button', 'web-view', 'form', 'canvas'],
+    currentTab: 14,
     views: [{ text: 'flex-direction: row', style: 'flex-direction:row' }, { text: 'flex-direction: column', style: 'height: 300px;flex-direction:column' }, { text: 'justify-content: flex-start', style: 'flex-direction:row;justify-content: flex-start' }, { text: 'justify-content: flex-end', style: 'flex-direction:row;justify-content: flex-end' }, { text: 'justify-content: center', style: 'justify-content: center' }, { text: 'justify-content: space-between', style: 'justify-content: space-between' }, { text: 'justify-content: space-around', style: 'justify-content: space-around' }, { text: 'align-items: flex-end', style: 'height: 200px;align-items: flex-end' }, { text: 'align-items: center', style: 'height: 200px;align-items: center' }, { text: 'align-items: flex-start', style: 'height: 200px;align-items: flex-start' }],
     colors: ['background: red', 'background: green', 'background: blue', 'background: yellow'],
     colors3: ['background: red', 'background: green', 'background: blue'],
@@ -80,5 +80,41 @@ Page({
     console.log(e);
   },
   onShareAppMessage: function(e){
+  },
+  formSubmit(e){
+    console.log(e);
+  },
+  onReady: function (e) {
+    // 使用 wx.createContext 获取绘图上下文 context
+    var context = wx.createCanvasContext('myCanvas')
+
+    context.setStrokeStyle("#00ff00")
+    context.setLineWidth(5)
+    context.rect(0, 0, 200, 200)
+    context.stroke()
+    context.setStrokeStyle("#ff0000")
+    context.setLineWidth(2)
+    context.moveTo(160, 100)
+    context.arc(100, 100, 60, 0, 2 * Math.PI, true)
+    context.moveTo(140, 100)
+    context.arc(100, 100, 40, 0, Math.PI, false)
+    context.moveTo(85, 80)
+    context.arc(80, 80, 5, 0, 2 * Math.PI, true)
+    context.moveTo(125, 80)
+    context.arc(120, 80, 5, 0, 2 * Math.PI, true)
+    context.stroke()
+    context.draw()
+    wx.canvasToTempFilePath({
+      x: 100,
+      y: 200,
+      width: 50,
+      height: 500,
+      destWidth: 1000,
+      destHeight: 1000,
+      canvasId: 'myCanvas',
+      success: function (res) {
+        console.log(res.tempFilePath)
+      }
+    })
   }
 })
