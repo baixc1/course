@@ -1,7 +1,7 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -70,8 +70,8 @@
 				},
 				{
 					"id": 6,
-					"name": "share0",
-					"pathName": "pages/advance/advance",
+					"name": "moments",
+					"pathName": "pages/moments/moments",
 					"query": "",
 					"scene": "1044",
 					"shareInfo": {

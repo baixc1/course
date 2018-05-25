@@ -1,7 +1,7 @@
 // pages/components/components.js
 Page({
   data: {
-    navbar: ['view', 'scroller-view', 'swipe', 'icon', 'progress', 'video', 'switch', 'slider', 'radio', 'selector', 'input', 'checkbox', 'button', 'web-view', 'form', 'canvas'],
+    navbar: ['view-flex', 'scroller-view', 'swipe', 'icon', 'progress', 'video', 'switch', 'slider', 'radio', 'selector', 'input', 'checkbox', 'button', 'web-view', 'form', 'canvas'],
     currentTab: 14,
     views: [{ text: 'flex-direction: row', style: 'flex-direction:row' }, { text: 'flex-direction: column', style: 'height: 300px;flex-direction:column' }, { text: 'justify-content: flex-start', style: 'flex-direction:row;justify-content: flex-start' }, { text: 'justify-content: flex-end', style: 'flex-direction:row;justify-content: flex-end' }, { text: 'justify-content: center', style: 'justify-content: center' }, { text: 'justify-content: space-between', style: 'justify-content: space-between' }, { text: 'justify-content: space-around', style: 'justify-content: space-around' }, { text: 'align-items: flex-end', style: 'height: 200px;align-items: flex-end' }, { text: 'align-items: center', style: 'height: 200px;align-items: center' }, { text: 'align-items: flex-start', style: 'height: 200px;align-items: flex-start' }],
     colors: ['background: red', 'background: green', 'background: blue', 'background: yellow'],
@@ -82,6 +82,11 @@ Page({
   onShareAppMessage: function(e){
   },
   formSubmit(e){
+    wx.getUserInfo({
+      success: function (res) {
+        console.log(res)
+      }
+    })
     console.log(e);
   },
   onReady: function (e) {

@@ -55,18 +55,10 @@ wx.setStorageSync 同步缓存
 *设置导航条
 1、wx.setNavigationBarColor
 wx.setNavigationBarColor({
-    frontColor: '#ffffff',
-    backgroundColor: '#ff0000',
-    animation: {
-        duration: 400,
-        timingFunc: 'easeIn'
-    }
+    frontColor: '#ffffff',			//前景颜色值, 仅支持 #ffffff 和 #000000
+    backgroundColor: '#ff0000'
 })
-2、wx.setNavigationTitle
-
-*绘图
-wx.canvasToTempFilePath(OBJECT, this)		//画布导出图片, 返回文件路径
-
+2、wx.setNavigationTitle({title:''})
 
 
 交互反馈
@@ -83,6 +75,27 @@ wx.showActionSheet({
 2、wx.redirectTo 关闭当前页，跳转页面
 3、wx.relaunch 关闭所有页面，跳转页面
 
+*绘图
+wx.createCanvasContext()						//创建 canvas 绘图上下文
+wx.canvasToTempFilePath(OBJECT, this)		//导出图片, 返回文件路径
+context 对象的方法
+	样式
+		-setFillStyle			//设置填充样式
+		-setStrokeStyle			//设置线条样式
+		-setLineWidth		//设置线条宽度
+	矩形
+		-fillRect			//填充一个矩形
+		-strokeRect				//画一个矩形（不填充）
+	路径
+		-fill  -stroke  -beginPath	-closePath	-moveTo		-lineTo		-arc
+	文字
+		-fillText
+		-setFontSize
+	图片
+		-drawImage
+	其他
+		-draw			//进行绘图
+		
 
 ***开放接口***
 *登录*

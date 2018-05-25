@@ -6,7 +6,8 @@
     "pages/components/components",
     "pages/fragment/fragment",
     "pages/advance/advance",
-    "pages/shop/shop"
+    "pages/shop/shop",
+    "pages/moments/moments"
   ],
   "window":{
     "navigationBarBackgroundColor": "#000",

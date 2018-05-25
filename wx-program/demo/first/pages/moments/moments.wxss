@@ -1,0 +1,12 @@
+.list{
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.list view{
+  width: 33.33%;
+  line-height: 70rpx;
+  text-align: center;
+}
+.active{
+  background: yellowgreen;
+}
