@@ -1,0 +1,4 @@
+<view class="dog">
+  <image mode="widthFix" src="{{url}}"></image>
+  <text>{{text}}</text>
+</view>

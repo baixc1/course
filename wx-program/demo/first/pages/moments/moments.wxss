@@ -10,3 +10,6 @@
 .active{
   background: yellowgreen;
 }
+canvas{
+  height: 500rpx;
+}

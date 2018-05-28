@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/temp/temp",
     "pages/request/request",
@@ -7,9 +7,10 @@
     "pages/fragment/fragment",
     "pages/advance/advance",
     "pages/shop/shop",
-    "pages/moments/moments"
+    "pages/moments/moments",
+    "pages/frame/frame"
   ],
-  "window":{
+  "window": {
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "basis",
     "navigationBarTextStyle": "white"

@@ -1,0 +1,7 @@
+.dog{
+  width: 49%;
+  text-align: center;
+}
+.dog image{
+  width: 100%;
+}

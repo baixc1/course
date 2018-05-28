@@ -1,3 +1,19 @@
+项目: 
+1、组件化			//思想: 一切皆组件	功能模块组件化	解耦
+2、页面组件划分
+	- 展示区域 > 标题 > 列表
+	- 列表 > 列表内容
+
+
+
+
+
+
+
+
+
+
+
 ***配置***
 app.js		//全局配置,pages、window、tabBar、networkTimeout、debug
 page.json	//只配置app.json中的window项
@@ -57,28 +73,55 @@ page.json	//只配置app.json中的window项
 			
 		
 ***自定义组件***
+0、概述
+	- 创建		
+		- json声明 	// "component": true		
+		- js注册 	// Component(obj)
+	- 使用
+		- json声明		//usingComponents
 1、组件模版和样式
-	组件模版
-	组件wxml的slot
-	组件样式
-	外部样式类
+	- slot			//承载子节点	Component-options-multipleSlots(name) -> 多slot支持
+	- 组件样式
+		- 用class选择器
+		- 样式继承		//font color
+		- 其他样式无影响
 2、Component构造器
-	...
+	参数
+		-properties			//组件对外属性  type  value  observer			js驼峰写法 - wxml连字符写法
+		-data 			//内部数据
+		-methods
+		-created			//组件进入页面
+		-attached
+		-ready		//布局完成
+		-moved		//组件被移动时执行
+		...
+	实例成员
+		-dataset
+		-data
+		-setData
+		-triggerEvent
+3、组件事件
+	- triggerEvent 		//触发事件
+		-事件名
+		-detail对象
+		-事件选项				//bubbles..
+4、behaviors			//代码共享
+	- Behavior() 		//构造器
+	- 包含属性、数据、生命周期函数和方法
+	- 覆盖和组合规则			
+		-属性或方法		//组件 > behavior		后 > 前
+		-数据对象		//合并
+		-生命周期函数		//逐个调用
+	- 内置 behaviors
+		-获得内置组件的一些行为
+		-wx://form-field		//表单控件行为 name	value
+5、组件件关系
+	- relations
+		-type			//相对关系				parent 、 child 、 ancestor 、 descendant
+		-linked			//关系生命周期函数		attached之后
+		-target			//关联
 
 
-1、类似page,json声明component: true
-2、注册: Component()
-3、使用时json引用,usingComponent
-4、this.selectComponent('#id') 获取组件对象 
-5、this.triggerEvent("实例的事件key") 触发自定义事件
-6、this.setData() 修改组件值
-
-Component({
-  properties: {//组件的对外属性,有value,type
-  },	
-  data: {}, // 私有数据，可用于模版渲染
-  methods: { }
-})
 
 
 

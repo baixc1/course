@@ -44,6 +44,8 @@ wx.setStorageSync 同步缓存
 ***设备***
 系统信息
 1、wx.getSystemInfo 获取系统信息
+	-screenWidth		//屏幕宽度
+	-windowWidth		//可使用窗口宽度
 2、wx.canIUse 判断api是否可用
 网络状态
 1、wx.getNetworkType 获取网络类型（2g,3g,4g,wifi,...)
@@ -92,7 +94,7 @@ context 对象的方法
 		-fillText
 		-setFontSize
 	图片
-		-drawImage
+		-drawImage			//绘制图像到画布
 	其他
 		-draw			//进行绘图
 		

@@ -4,8 +4,10 @@ Page({
       text: 'shop', url: '../shop/shop'
     }, {
       text: '转发群/单聊', type: 1
-    }, {
+      }, {
       text: '转发朋友圈', url: '../moments/moments'
+    }, {
+        text: 'frame', url: '../frame/frame'
     }],
     url: '../../images/ewm.png'
   },
