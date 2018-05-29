@@ -16,10 +16,15 @@
     display:flex;
 }
 .flex-item{
-    width: 100px;
+    width: 75px;
     height: 100px;
 }
-
+.section:first-child .flex-wrp{
+    flex-flow:wrap;
+}
+.section:first-child .flex-item{
+    width: 50%;
+}
 scroll-view:first-child{
   height: 200px;
 }

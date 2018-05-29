@@ -1,0 +1,21 @@
+.title{
+  float: left;
+  width: 33.33%;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+.active{
+  border-bottom: 1px solid red;
+}
+.clearfix:after{
+  content: '';
+  display: block;
+  clear:both;
+}
+.content{
+  display: flex;
+  flex-flow: wrap;
+}

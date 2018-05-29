@@ -1,0 +1,16 @@
+<view class="dog">
+  <view>
+    <image mode="widthFix" src="{{bigImg}}"></image>
+    <view class="tag">
+      <cc type="{{tag}}"></cc>
+      <text>{{tagDict[tag]}}</text>
+      <cc class="close" type="close" bindtap="close"></cc>
+    </view>
+  </view>
+  <view class="text">
+    <cc type="jinhao"></cc>
+    <text> {{text}}</text>
+  </view>
+  
+  <button data-index="{{text}}" bindtap="go">前往订阅</button>
+</view>

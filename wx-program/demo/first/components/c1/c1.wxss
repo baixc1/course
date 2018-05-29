@@ -1,7 +1,11 @@
+:host {
+  float: left;
+  width: 50%;
+}
 .dog{
-  width: 49%;
   text-align: center;
 }
 .dog image{
   width: 100%;
+  border-radius:16rpx;
 }

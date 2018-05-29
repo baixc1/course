@@ -1,0 +1,33 @@
+:host {
+  float: left;
+  width: 50%;
+}
+.dog{
+  position: relative;
+  text-align: center;
+}
+.dog image{
+  width: 100%;
+  border-radius:16rpx;
+}
+.dog button{
+  margin:20rpx auto;
+  width:70%;
+}
+.tag{
+  position: absolute;
+  top: 20rpx;
+  left: 30rpx;
+  right: 30rpx;
+  text-align: left;
+}
+.close{
+  position: absolute;
+  right: 0;
+}
+.tag,.text{
+  display: flex;
+}
+.text{
+  justify-content: center;
+}

@@ -1,0 +1,8 @@
+<block wx:for="{{list}}">
+  <view class="left">
+    <image v-if="{{index%2 == 0}}" class="img" mode="widthFix" src="{{item.url}}" bindtap="tap"></image>
+  </view>
+  <view class="right">
+    <image v-if="{{index%2 == 1}}" class="img" mode="widthFix" src="{{item.url}}" bindtap="tap"></image>
+  </view>
+</block>

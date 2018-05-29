@@ -13,6 +13,10 @@
 11、font:	font-weight font-size/line-height font-family	
 12、absolute定位				//相对于非static定位的父元素(可用relative撑开父元素高度)
 13、image居中					//display: block; margin: 0 auto;
+14、inline-block			//基线对齐		vertical-align
+15、居中布局
+		父: display: flex;	flex-direction: center;	align-items: center;	//图文混合
+		父: flex-flow:wrap;		//伸缩容器		多行多列
 
 *框模型*
 1、	margin: auto; 	对块标签元素有效，作用于自身
@@ -29,6 +33,10 @@
 
 *定位*
 1、float布局存在文字环绕情况
+2、清除浮动的影响
+	- overflow:hidden			
+	- clear:both			//只清除影响, 不撑开父元素			内部标签可撑开
+	- :after				//伪元素	 content: ''    display: block		clear:both;
 
 
 *高级*

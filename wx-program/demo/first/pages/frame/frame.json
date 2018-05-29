@@ -1,5 +1,10 @@
 {
   "usingComponents": {
-    "ca": "/components/c1/c1"
-  }
+    "ca": "/components/c1/c1",
+    "cb": "/components/c2/c2",
+    "cc": "/components/icon/icon",
+    "ta": "/components/title1/title1",
+    "tb": "/components/hotImg/hotImg"
+  },
+  "navigationBarTitleText": "组件列表"
 }

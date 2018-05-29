@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  flex-flow: wrap;
+}
+.left,.right{
+  width: 50%;
+}
+.img{
+  width: 100%;
+}
