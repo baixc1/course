@@ -6,5 +6,8 @@
   width: 50%;
 }
 .img{
+  margin-bottom:-9rpx;
+  padding-bottom: 9rpx;
   width: 100%;
+  background: #000;
 }

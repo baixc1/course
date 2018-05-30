@@ -38,14 +38,26 @@
 <!-- title1 -->      
 <view hidden="{{activeIndex!=3}}">
   <ta title="订阅更多" type="1"></ta>
-  <ta title="订阅更多" type="4"></ta>
   <ta title="订阅更多" type="2"></ta>
   <ta title="订阅更多" type="3"></ta>
+  <ta title="订阅更多" type="4"></ta>
+  <ta title="订阅更多" type="1" bg="white"></ta>
+  <ta title="订阅更多" type="2" bg="white"></ta>
+  <ta title="订阅更多" type="3" bg="white"></ta>
+  <ta title="订阅更多" type="4" bg="white"></ta>
+  <ta title="订阅更多" type="2" bg="white" icon="gaoxiao"></ta>
 </view>  
 
 
 
 <!-- hotImgs -->      
 <view hidden="{{activeIndex!=4}}">
+  <ta title="今日体育" type="4"></ta>
   <tb list="{{tiyuList}}"></tb>
+</view>  
+
+
+<!-- c3 -->      
+<view hidden="{{activeIndex!=5}}">
+  <cc url="{{subject.list[0].bigImg}}" text="{{subject.list[0].text}}" icon="gaoxiao"></cc>
 </view>  

@@ -19,3 +19,7 @@
 .second-icon{
   right: 100rpx;
 }
+.white{
+  background: #fff;
+  color: #000;
+}

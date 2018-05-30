@@ -1,27 +1,19 @@
-<view wx:if="{{type==1}}" class="title">{{title}}</view>
-<view wx:if="{{type==2}}" class="title">
-  <view class="title1">
-    <btn type="jinhao"></btn>
+<view class="title {{bg}}">
+
+  <block wx:if="{{type==1}}">{{title}}</block>
+  <view wx:else class="title1">
+    <btn type="{{icon}}"></btn>
     <text>{{title}}</text>
-    <view class="last-icon" bindtap="more">
+    
+    <view wx:if="{{type==3}}" class="last-icon" bindtap="more">
       <text>更多</text>  
       <btn type="more"></btn>
     </view>
+
+    <block wx:if="{{type==4}}">
+      <btn class="second-icon" type="weixin"></btn>
+      <btn class="last-icon" type="pengyouquan"></btn>
+    </block>
   </view>
 </view>
 
-<view wx:if="{{type==3}}" class="title">
-  <view class="title1">
-    <btn type="jinhao"></btn>
-    <text>{{title}}</text>
-    <btn class="second-icon" type="weixin"></btn>
-    <btn class="last-icon" type="pengyouquan"></btn>
-  </view>
-</view>
-
-<view wx:if="{{type==4}}" class="title">
-  <view class="title1">
-    <btn type="jinhao"></btn>
-    <text>{{title}}</text>
-  </view>
-</view>

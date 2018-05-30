@@ -11,12 +11,13 @@
 		-flex-shrink		//溢出比率收缩		默认宽度之和大于容器	initial(1)
 	父元素
 	- flex-flow		// flex-direction 	 flex-wrap	子元素排列方式
-		-flex-direction		//方向			raw/column...
+		-flex-direction		//方向				
+			-值	flex-direction: row|row-reverse|column|column-reverse|initial|inherit;
 		-flex-wrap		//是否拆行或拆列	nowrap/wrap...
 2. 对齐
 	- justify-content		//横轴对齐方式
 		-值 flex-start|flex-end|center|space-between|space-around|initial|inherit;
-	- align-content			//纵轴		多行
+	- align-content			//纵轴		多行整体居中(单行无效)   会覆盖align-items
 		-值	stretch|center|flex-start|flex-end|space-between|space-around|initial|inherit;
-	- align-items			//纵轴
+	- align-items			//纵轴		多行个体居中
 		-值 stretch|center|flex-start|flex-end|baseline|initial|inherit;

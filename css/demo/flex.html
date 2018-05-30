@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			*{
+				margin:0px;
+				padding: 0px;
+			}
+			div{
+				text-align: center;
+			}
+			.child-1{
+				margin: 30px auto;
+				display: flex;
+				width: 100px;
+				height: 90px;
+				border: 1px solid #0f0f0f;
+			}
+			.child-2{
+				width: 30px;
+				height: 20px;
+				border: 1px solid #0f0f0f;
+			}
+			.box{
+				display:flex;
+				justify-content: center;
+			}
+			.box>div{
+				display:flex;
+				flex-direction: column;
+				margin: 0 10px;
+			}
+			
+			.d1,.d3{
+				align-content: center;
+			}
+			.d2,.d4{
+				align-items: center;
+			}
+			.d3,.d4{
+				flex-wrap: wrap;
+			}
+			.d3 .child-2,
+			.d4 .child-2{
+				width: 60%;
+			}
+			.d31{
+				align-content: space-around;
+			}
+			.d32{
+				align-content: space-between;
+			}
+		</style>
+	</head>
+	<body>
+		<div>align-content</div>
+		<div class="child-1 d1">
+			<div class="child-2">                   
+			</div>
+			<div class="child-2">                   
+			</div>
+		</div>
+		<div>align-items</div>
+		<div class="child-1 d2">
+			<div class="child-2">                   
+			</div>
+			<div class="child-2">                   
+			</div>
+		</div>
+	<div>多行align-content</div>
+	<div class="box">
+		<div>
+			<div>center</div>
+			<div class="child-1 d3">
+				<div class="child-2">                   
+				</div>
+				<div class="child-2">                   
+				</div>
+			</div>
+		</div>
+		<div>
+			<div> space-around</div>
+			<div class="child-1 d3 d31">
+				<div class="child-2">                   
+				</div>
+				<div class="child-2">                   
+				</div>
+			</div>
+		</div>
+		<div>
+			<div>space-between</div>
+			<div class="child-1 d3 d32">
+				<div class="child-2">                   
+				</div>
+				<div class="child-2">                   
+				</div>
+			</div>
+		</div>
+	</div>	
+		<div>多行align-items</div>
+		<div class="child-1 d4">
+			<div class="child-2">                   
+			</div>
+			<div class="child-2">                   
+			</div>
+		</div>
+	</body>
+	<script>
+	
+	</script>
+</html>

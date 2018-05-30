@@ -2,7 +2,7 @@ Page({
   data:{
     subject: {
       list: [{
-        text: '1',
+        text: '什么都挡不住',
         bigImg: '/images/components/dog.png',
         tag: 'nvshen'
       }, {
@@ -21,7 +21,7 @@ Page({
       title: '搞笑萌宠秀',
       tag: '萌宠'
     },
-    cList: ['c1', 'icon', 'c2', 'title1', 'hotImg'],
+    cList: ['c1', 'icon', 'c2', 'title1', 'hotImg', 'c3'],
     activeIndex: 4,
     tiyuList: []
   },
