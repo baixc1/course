@@ -1,6 +1,6 @@
 <view class="dog">
   <view>
-    <image mode="widthFix" src="{{bigImg}}"></image>
+    <image class="big-img" mode="widthFix" src="{{bigImg}}"></image>
     <view class="tag">
       <cc type="{{tag}}"></cc>
       <text>{{tagDict[tag]}}</text>
@@ -8,7 +8,7 @@
     </view>
   </view>
   <view class="text">
-    <cc type="jinhao"></cc>
+    <cc type="green"></cc>
     <text> {{text}}</text>
   </view>
   

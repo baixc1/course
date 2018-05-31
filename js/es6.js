@@ -30,4 +30,4 @@
 	
 *export default 命令
 	-为模块指定默认输出
-	-import不使用大括号
+	-import不使用大括号 

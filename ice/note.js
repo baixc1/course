@@ -1,6 +1,8 @@
 ***飞冰***
 *实践
 1. 页面路径			//routerConfig.js
+2. 页面列表 - /src/pages
+	布局列表 - /src/layouts
 
 
 

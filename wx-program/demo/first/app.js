@@ -1,4 +1,5 @@
 var aldstat = require("./utils/ald-stat.js")
+var hotapp = require('utils/hotapp.js')
 //app.js
 App({
   onLaunch: function () {
@@ -6,6 +7,7 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        hotapp.onEvent("login", "1000");
       }
     })
     // 获取用户信息
@@ -30,6 +32,7 @@ App({
     })
   },
   onShow: function(obj){
+    hotapp.onEvent("onShow");
     var shareTicket = wx.getShareInfo({'shareTicket': obj.shareTicket}) 
   },
   globalData: {

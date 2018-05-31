@@ -5,7 +5,7 @@
     "cc": "/components/icon/icon",
     "ta": "/components/title1/title1",
     "tb": "/components/hotImg/hotImg",
-    "cc": "/components/c3/c3"
+    "cd": "/components/c3/c3"
   },
   "navigationBarTitleText": "组件列表"
 }

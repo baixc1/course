@@ -27,6 +27,11 @@ Page({
   },
   onLoad(){
     this.calTiyu()
+    var app = getApp()
+
+    wx.reportAnalytics('test1', {
+      product_index_test1: 11,
+    });
   },
   calTiyu(){
     var list = []
@@ -51,12 +56,16 @@ Page({
     })
   },
   go(e){
-    console.log(e.detail.target.dataset)
+    console.log(e.detail.target.dataset) 
+    
   },
   close(e) {
     console.log(e)
+    var app = getApp()
+    app.aldstat.sendEvent('事件名称')
   },
   more(e) {
     console.log(e)
   }
+
 })

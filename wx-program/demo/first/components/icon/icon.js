@@ -2,9 +2,12 @@ Component({
   properties: {
     type: String,
   },
+  data:{
+    url: ''
+  },
   attached(){
     this.setData({
-      type: '/images/components/' + this.properties.type + '.png'
+      url: '/images/components/' + this.properties.type + '.png'
     })
   },
 })

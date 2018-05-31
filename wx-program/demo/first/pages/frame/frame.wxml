@@ -22,7 +22,7 @@
   <cc type="pengyouquan"></cc>
 </view>
 <!-- c2 -->      
-<view hidden="{{activeIndex!=2}}">
+<view wx:if="{{activeIndex==2}}">
   <ta title="订阅更多" type="1"></ta>
   <view class="content">
     <cb wx:for="{{subject.list}}" 
@@ -38,14 +38,14 @@
 <!-- title1 -->      
 <view hidden="{{activeIndex!=3}}">
   <ta title="订阅更多" type="1"></ta>
-  <ta title="订阅更多" type="2"></ta>
+  <ta title="订阅更多" type="2" icon="green"></ta>
   <ta title="订阅更多" type="3"></ta>
   <ta title="订阅更多" type="4"></ta>
   <ta title="订阅更多" type="1" bg="white"></ta>
   <ta title="订阅更多" type="2" bg="white"></ta>
   <ta title="订阅更多" type="3" bg="white"></ta>
   <ta title="订阅更多" type="4" bg="white"></ta>
-  <ta title="订阅更多" type="2" bg="white" icon="gaoxiao"></ta>
+  <ta title="订阅更多" type="2" bg="white" icon="green"></ta>
 </view>  
 
 
@@ -59,5 +59,5 @@
 
 <!-- c3 -->      
 <view hidden="{{activeIndex!=5}}">
-  <cc url="{{subject.list[0].bigImg}}" text="{{subject.list[0].text}}" icon="gaoxiao"></cc>
+  <cd url="{{subject.list[0].bigImg}}" text="{{subject.list[0].text}}" icon="gaoxiao"></cd>
 </view>  

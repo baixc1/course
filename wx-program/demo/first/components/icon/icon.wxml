@@ -1,1 +1,1 @@
-<view class="icon" style="background-image:url({{type}})"></view>
+<image src="{{url}}" class="icon"></image>
