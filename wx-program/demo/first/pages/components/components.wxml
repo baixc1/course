@@ -40,7 +40,7 @@
 <view hidden="{{currentTab!==5}}">
   <!--视频组件src资源地址，binderror为监听错误信息-->
   <video 
-      src="http://sdk.static.dongtu.com/@/promotion/1524033223330/20180418eyercbxg.mp4"
+      src="https://pic.ibaotu.com/00/63/01/12h888piCneY.mp4"
       hidden="{{}}"
       binderror="listenerVideo" />
 </view>

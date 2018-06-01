@@ -31,3 +31,14 @@
 *export default 命令
 	-为模块指定默认输出
 	-import不使用大括号 
+	
+*函数
+1. 默认参数
+	- 基本数据类型
+	- 函数
+	- TDZ
+2. 箭头函数	
+	- 语法 function(){} -> n/() => exp/{}/({});		//exp、({})是return
+	- this 指向包含它的函数->对象		
+	- 不能使用new
+	- 没有arguments对象		//使用作用域-闭包

@@ -1,6 +1,9 @@
 ***表单组件***
 <button>
-open-type="contact" 打开客服会话
+	- open-type
+		-contact 		//打开客服会话
+		-getUserInfo		//获取用户信息
+			-bindgetuserinfo
 
 <form>
 	-button formType = submit 		//提交

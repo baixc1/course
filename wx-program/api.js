@@ -46,7 +46,9 @@ wx.setStorageSync 同步缓存
 1、wx.getSystemInfo 获取系统信息
 	-screenWidth		//屏幕宽度
 	-windowWidth		//可使用窗口宽度
-2、wx.canIUse 判断api是否可用
+2、wx.canIUse 判断API，回调，参数，组件等是否可用
+	-${API}.${method}.${param}.${options}
+	-${component}.${attribute}.${option}
 网络状态
 1、wx.getNetworkType 获取网络类型（2g,3g,4g,wifi,...)
 
