@@ -79,5 +79,39 @@
 		-事件接口	//Events interface 类似微信小程序
 			-$on(eventName) 监听事件		//子组件v-on事件
 			-$emit(eventName,[]) 触发事件
-			
+
+自定义指令
+	- Vue.directive('drc-name', {})
+	- 钩子函数
+		-bind		//执行一次的初始化动作
+		-inserted		//插入父节点时
+		-update
+		-componentUpdated
+		-unbind
+	- 钩子函数参数
+		-el
+		-binding
+			-name		//指令名
+			-value		//绑定值
+			...
+		-vnode
+	- 简写
+路由
+	- 单页Web应用		//SPA
+	- 载入 vue-router 库
+	- <router-link> 组件	//to属性  渲染成<a>
+	- <router-view>		//路由出口		组件渲染
+	- 模块化机制		//导入Vue和VueRouter	 Vue.use(VueRouter)
+	- 定义（路由）组件
+		-{ template: '' }
+	- 定义路由		
+		-routes = [{ path: '', component: $var }
+		-映射组件
+		-组件构造器		//Vue.extend()
+		-组件配置对象		//定义（路由）组件
+	- 路由实例化
+		-new VueRouter({routes})
+	- 创建和挂载根实例
+		new Vue({router}).$mount('#app')
 	
+		
