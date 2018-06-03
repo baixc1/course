@@ -17,6 +17,11 @@
 	
 	scrollTop+clientHeight=height
 
+*Bom
+1.Location对象
+	- window.location
+	- hostname		//主机名
+
 *ECMAScript		//European Computer Manufacturers Association
 1、定时器传参
 a、字符串形式

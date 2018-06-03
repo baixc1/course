@@ -1,10 +1,3 @@
-*周期*
-created, 
-counted: 
-
-*方法*
-methods
-
-
-*问题*
-1、el: '#id'	//范围之外的元素无法解析Vue语法糖
+*Vue
+1. vue报错：eslint-disable-next-line to ignore the next line.
+	- 不用eslint检查功能
