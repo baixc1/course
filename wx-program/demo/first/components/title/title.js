@@ -1,14 +1,17 @@
 Component({
   properties: {
     title: String,
-    type: String,
     bg: {
       type: String,
       value: ''
     },
-    icon: {
+    leftIcon: {
       type: String,
-      value: 'jinhao'
+      value: ''
+    },
+    rightIcon: {
+      type: String,
+      value: ''
     }
   },
   methods:{

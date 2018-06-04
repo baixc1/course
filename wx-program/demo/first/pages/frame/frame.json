@@ -3,9 +3,10 @@
     "ca": "/components/c1/c1",
     "cb": "/components/c2/c2",
     "cc": "/components/icon/icon",
-    "ta": "/components/title1/title1",
+    "title": "/components/title/title",
     "tb": "/components/hotImg/hotImg",
-    "cd": "/components/c3/c3"
+    "cd": "/components/c3/c3",
+    "search": "/components/search/search"
   },
   "navigationBarTitleText": "组件列表"
 }

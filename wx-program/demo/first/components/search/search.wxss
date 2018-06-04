@@ -1,0 +1,23 @@
+.section{
+  position: relative;
+  padding: 10rpx 100rpx 34rpx 40rpx;
+  height: 164rpx;
+  background: #252525;
+  color: #fff;
+  box-sizing: border-box;
+}
+.section view{
+  height: 60rpx;
+  font-size: 44rpx; 
+}
+.section input{
+  margin-top: 4rpx;
+  height: 56rpx;
+  font-size: 40rpx;
+}
+.section image{
+  position: absolute;
+  top: 60rpx;right: 30rpx;
+  width: 54rpx;
+  height: 54rpx;
+}

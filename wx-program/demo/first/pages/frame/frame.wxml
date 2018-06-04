@@ -6,11 +6,11 @@
 </view>
 <!-- c1 -->      
 <view hidden="{{activeIndex!=0}}">
-  <ta title="{{subject.title}}" type="2" bind:more="more"></ta>
+  <title title="{{subject.title}}" type="2" bind:more="more"></title>
   <view class="content">
     <ca wx:for="{{subject.list}}" url="{{item.bigImg}}" text="{{item.text}}"></ca>
   </view>
-  <ta title="{{subject.tag}}" type="3"></ta>
+  <title title="{{subject.tag}}" type="3"></title>
 </view>  
 <!-- icon -->    
 <view hidden="{{activeIndex!=1}}">
@@ -23,7 +23,7 @@
 </view>
 <!-- c2 -->      
 <view wx:if="{{activeIndex==2}}">
-  <ta title="订阅更多" type="1"></ta>
+  <title title="订阅更多" type="1"></title>
   <view class="content">
     <cb wx:for="{{subject.list}}" 
         bigImg="{{item.bigImg}}" 
@@ -37,22 +37,14 @@
 
 <!-- title1 -->      
 <view hidden="{{activeIndex!=3}}">
-  <ta title="订阅更多" type="1"></ta>
-  <ta title="订阅更多" type="2" icon="green"></ta>
-  <ta title="订阅更多" type="3"></ta>
-  <ta title="订阅更多" type="4"></ta>
-  <ta title="订阅更多" type="1" bg="white"></ta>
-  <ta title="订阅更多" type="2" bg="white"></ta>
-  <ta title="订阅更多" type="3" bg="white"></ta>
-  <ta title="订阅更多" type="4" bg="white"></ta>
-  <ta title="订阅更多" type="2" bg="white" icon="green"></ta>
+  <title leftIcon="Oval3" rightIcon="Group13" title="大家热议的电影头条"></title>
 </view>  
 
 
 
 <!-- hotImgs -->      
 <view hidden="{{activeIndex!=4}}">
-  <ta title="今日体育" type="4"></ta>
+  <title title="今日体育" type="4"></title>
   <tb list="{{tiyuList}}"></tb>
 </view>  
 
@@ -60,4 +52,9 @@
 <!-- c3 -->      
 <view hidden="{{activeIndex!=5}}">
   <cd url="{{subject.list[0].bigImg}}" text="{{subject.list[0].text}}" icon="gaoxiao"></cd>
+</view>  
+
+<!-- c3 -->      
+<view hidden="{{activeIndex!=6}}">
+  <search></search>
 </view>  

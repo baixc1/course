@@ -1,0 +1,17 @@
+.title{
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 20rpx;
+  height: 50rpx;
+  background: #000;
+  color: #fff;
+}
+.title btn{
+  display: flex;
+  flex-items: center;
+}
+.rt-btn{
+  position: absolute;
+  right: 24rpx;
+}

@@ -21,8 +21,8 @@ Page({
       title: '搞笑萌宠秀',
       tag: '萌宠'
     },
-    cList: ['c1', 'icon', 'c2', 'title1', 'hotImg', 'c3'],
-    activeIndex: 4,
+    cList: ['c1', 'icon', 'c2', 'title', 'hotImg', 'c3', 'search'],
+    activeIndex: 3,
     tiyuList: []
   },
   onLoad(){

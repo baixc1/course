@@ -1,0 +1,5 @@
+<view class="section">
+  <view>动图头条</view>
+  <input placeholder="只看热梗，聊天有料"/>
+  <image src="../../images/components/Group.png"></image>
+</view>

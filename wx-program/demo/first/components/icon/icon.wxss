@@ -1,5 +1,3 @@
 .icon{
-  width: 48rpx;
-  height: 48rpx;
-  background: no-repeat center;
+  width: 32rpx;
 }
