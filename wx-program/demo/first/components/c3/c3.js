@@ -4,4 +4,9 @@ Component({
     text: String,
     icon: String
   },
+  methods:{
+    change(){
+      console.log(1)
+    }
+  }
 })

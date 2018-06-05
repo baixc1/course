@@ -17,6 +17,10 @@ Component({
   methods:{
     more(){
       this.triggerEvent('more',{a:1})
+    },
+    go(){
+      console.log(2)
+      this.triggerEvent('go')
     }
   }
 })

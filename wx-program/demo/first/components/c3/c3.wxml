@@ -1,2 +1,2 @@
-<title title="{{text}}" type="2" bg="white" icon="{{icon}}"></title>
+<title bind:go="change" title="{{text}}" type="2" bg="white" icon="{{icon}}"></title>
 <image class="img" mode="widthFix" src="{{url}}"></image>

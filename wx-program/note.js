@@ -1,4 +1,13 @@
 *微信小程序*
-1. background-image的本地图片真机失效		//可用网络链接(任意)
-2. <image>中的url路径问题		//正确路径或空(间接拼接url)
-3. 授权: 设置-使用我的用户信息		//需要重新预览或点击头像	wx.getSetting -> wx.getUserInfo
+- background-image的本地图片真机失效		//可用网络链接(任意)
+- <image>中的url路径问题		//正确路径或空(间接拼接url)
+- 授权: 设置-使用我的用户信息		//需要重新预览或点击头像	wx.getSetting -> wx.getUserInfo
+- 组件必须初始化(js), 否则找不到组件
+- 必须写好json, 再使用组件, 否则报错..get another
+- 图片mode="widthFix"时, 图片不展示则撑开高度		//设置固定高度
+- 自定义标签之间的margin失效
+- 自定义组件多层嵌套事件
+	- 孙组件		//一般事件绑定方法, 函数中调用	this.triggerEvent('子组件绑定的函数名') 触发
+	- 子组建		//bind:函数名='methods中方法'
+- poster电脑无效, 手机有效
+- video上的position布局无效   	//原生控件处于顶层

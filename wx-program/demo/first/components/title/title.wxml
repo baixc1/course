@@ -1,4 +1,4 @@
-<view class="title {{bg}}">
+<view class="title {{bg}}" bindtap="go">
     <btn wx:if="{{leftIcon}}" type="{{leftIcon}}"></btn>
     <text>{{title}}</text>
     <btn class="rt-btn" wx:if="{{rightIcon}}" type="{{rightIcon}}"></btn>
