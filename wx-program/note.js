@@ -10,4 +10,10 @@
 	- 孙组件		//一般事件绑定方法, 函数中调用	this.triggerEvent('子组件绑定的函数名') 触发
 	- 子组建		//bind:函数名='methods中方法'
 - poster电脑无效, 手机有效
-- video上的position布局无效   	//原生控件处于顶层
+- video上的position布局无效   	//原生控件处于顶层  cover标签
+- 视频js控制播放		//wx.createVideoContext('myVideo',this)  调用play()   手机有效, 必加this
+- 签名
+	- sha1算法				//参数: 格式化的上送字段(排序 事件戳  key(key不能上送))的字符串
+	- 新增上送字段		//由sha1计算
+- 自定义组件properties中有未传参的数据, 则报错		//'name' of undefined ...
+- wx.showActionSheet		//​显示操作菜单

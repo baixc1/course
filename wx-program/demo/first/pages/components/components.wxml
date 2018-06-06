@@ -101,7 +101,7 @@
 </view>
 
 <view hidden="{{currentTab!=13}}">
-  <!--<web-view src="http://www.iqiyi.com/"></web-view>-->
+  <!-- <web-view src="http://oe7ipw0lj.bkt.clouddn.com/20180606060220410.html"></web-view> -->
 </view>
 
 <view hidden="{{currentTab!=14}}" class="navbar navbar-btn">
