@@ -17,3 +17,4 @@
 	- 新增上送字段		//由sha1计算
 - 自定义组件properties中有未传参的数据, 则报错		//'name' of undefined ...
 - wx.showActionSheet		//​显示操作菜单
+- wx.getImageInfo		//使用网络图片, 需加http://
