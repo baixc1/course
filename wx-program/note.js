@@ -18,3 +18,6 @@
 - 自定义组件properties中有未传参的数据, 则报错		//'name' of undefined ...
 - wx.showActionSheet		//​显示操作菜单
 - wx.getImageInfo		//使用网络图片, 需加http://
+- <text>组件的padding、margin 失效
+- js文件有文件作用域, 不能做全局变量使用
+- scroll-view的子元素不能是块元素

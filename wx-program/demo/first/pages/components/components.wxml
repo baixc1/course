@@ -14,11 +14,13 @@
 
 <view hidden="{{currentTab!==1}}">
     <!--垂直滚动，这里必须设置高度-->
-  <scroll-view scroll-y="true">
+  <scroll-view scroll-y="true" bindscroll="scroll">
       <view class="flex-item"  wx:for="{{colors}}" style="{{item}}"></view>
+      <!-- <video src="https://pic.ibaotu.com/00/63/01/12h888piCneY.mp4" /> -->
   </scroll-view>
+  <!-- <video src="https://pic.ibaotu.com/00/63/01/12h888piCneY.mp4" />
   <!--水平滚动-->
-  <scroll-view scroll-x="true">
+   <scroll-view scroll-x="true">
     <view wx:for="{{colors}}" style="{{item}}"></view>
   </scroll-view>
 </view>

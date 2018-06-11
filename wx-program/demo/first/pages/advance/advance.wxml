@@ -5,3 +5,4 @@
     <button wx:else open-type="share">{{item.text}}</button> 
   </block>
 </view>  
+{{a}}

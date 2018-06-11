@@ -2,7 +2,7 @@
 Page({
   data: {
     navbar: ['view-flex', 'scroller-view', 'swipe', 'icon', 'progress', 'video', 'switch', 'slider', 'radio', 'selector', 'input', 'checkbox', 'button', 'web-view', 'form', 'canvas'],
-    currentTab: 14,
+    currentTab: 1,
     views: [{ text: 'flex-direction: row', style: 'flex-direction:row' }, { text: 'flex-direction: column', style: 'height: 300px;flex-direction:column' }, { text: 'justify-content: flex-start', style: 'flex-direction:row;justify-content: flex-start' }, { text: 'justify-content: flex-end', style: 'flex-direction:row;justify-content: flex-end' }, { text: 'justify-content: center', style: 'justify-content: center' }, { text: 'justify-content: space-between', style: 'justify-content: space-between' }, { text: 'justify-content: space-around', style: 'justify-content: space-around' }, { text: 'align-items: flex-end', style: 'height: 200px;align-items: flex-end' }, { text: 'align-items: center', style: 'height: 200px;align-items: center' }, { text: 'align-items: flex-start', style: 'height: 200px;align-items: flex-start' }],
     colors: ['background: red', 'background: green', 'background: blue', 'background: yellow'],
     colors3: ['background: red', 'background: green', 'background: blue'],
@@ -120,6 +120,14 @@ Page({
       success: function (res) {
         console.log(res.tempFilePath)
       }
+    })
+  },
+  scroll(e){      //view-scroll
+    console.log(e.detail)
+  },
+  onPageScroll: function (e) {    //页面滚动事件
+    wx.setNavigationBarTitle({
+      title: '当前页面' + e.scrollTop
     })
   }
 })

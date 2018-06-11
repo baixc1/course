@@ -5,21 +5,27 @@ Page({
     }, {
       text: '转发群/单聊', type: 1
       }, {
-      text: '转发朋友圈', url: '../moments/moments'
+      text: 'canvas', url: '../moments/moments'
     }, {
         text: 'frame', url: '../frame/frame'
     }],
-    url: '../../images/ewm.png'
+    url: '../../images/ewm.png',
+    a: '1',
+  },
+  onLoad(){
+    this.setData({
+      a: 2
+    })
   },
   changePage: function (e) {
     wx.navigateTo({ url: e.target.dataset.url })
   },
   //转发
   onShareAppMessage(e) {
-    wx.showShareMenu({
-      // 要求小程序返回分享目标信息
-      withShareTicket: true
-    });
+    // wx.showShareMenu({
+    //   // 要求小程序返回分享目标信息
+    //   withShareTicket: true
+    // });
     return {
       success(res){
         if (res.shareTickets) {
