@@ -21,3 +21,7 @@
 - <text>组件的padding、margin 失效
 - js文件有文件作用域, 不能做全局变量使用
 - scroll-view的子元素不能是块元素
+- 自定义组件中使用wx:if, 可能使Wxml元素增多, 暂无影响。如果image元素无url, 默认300*225
+- 两元素之间的空隙, 使用padding可实现点击
+- wxml绑定事件时, 不能加{{}}, 否则点击无反应
+- hidden 前面不加:
