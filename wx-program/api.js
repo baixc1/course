@@ -149,6 +149,13 @@ wx.getUserInfo({
 1. 使用
 	-获取模板ID
 
+*客服消息*
+1. <button open-type="contact" />
+2. 后台配置url, token
+	
+	
+	
+	
 ***页面***
 交互反馈
 1、wx.showLoading  loadding框

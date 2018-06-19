@@ -3,19 +3,17 @@ Page({
     list: [{
       text: 'shop', url: '../shop/shop'
     }, {
-      text: '转发群/单聊', type: 1
+      text: '转发群/单聊', type: 'share'
       }, {
       text: 'canvas', url: '../moments/moments'
     }, {
-        text: 'frame', url: '../frame/frame'
-    }],
+      text: 'frame', url: '../frame/frame'
+      }, {
+        text: '联系客服', type: 'contact'
+      }],
     url: '../../images/ewm.png',
-    a: '1',
   },
   onLoad(){
-    this.setData({
-      a: 2
-    })
   },
   changePage: function (e) {
     wx.navigateTo({ url: e.target.dataset.url })
