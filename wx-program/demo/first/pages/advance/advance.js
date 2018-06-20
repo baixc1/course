@@ -12,6 +12,10 @@ Page({
         text: '联系客服', type: 'contact'
       }],
     url: '../../images/ewm.png',
+    item: {
+      a: '1',
+      b: '2'
+    }
   },
   onLoad(){
   },

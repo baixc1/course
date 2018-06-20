@@ -1,13 +1,14 @@
 <!--导航条-->  
 <view class="main">  
   <block wx:for="{{list}}">
-    <button wx:if="{{item.type}}" open-type="{{type}}">{{item.text}}</button> 
+    <button wx:if="{{item.type}}" open-type="{{item.type}}">{{item.text}}</button> 
     <button wx:else  data-url="{{item.url}}" bindtap="changePage">{{item.text}}</button>  
   </block>
 </view>  
 <contact-button 
-  type="default-light" 
+  type="default-dark" 
   size="20"
   session-from="weapp"
->sssssss
+>
 </contact-button>
+<view wx:for="{{item}}">{{item}}:{{index}}</view>
