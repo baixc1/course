@@ -19,6 +19,10 @@ Page({
   },
   onLoad(){
   },
+  formSubmit: function (e) {
+    debugger
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
   changePage: function (e) {
     wx.navigateTo({ url: e.target.dataset.url })
   },

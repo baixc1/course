@@ -12,3 +12,10 @@
 >
 </contact-button>
 <view wx:for="{{item}}">{{item}}:{{index}}</view>
+<form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+  <view class="section section_gap">
+    <view class="section__title">switch</view>
+    <switch name="switch"/>
+  </view>
+  <button formType="submit">Submit</button>
+</form>

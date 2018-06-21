@@ -150,8 +150,10 @@ wx.getUserInfo({
 	-获取模板ID
 
 *客服消息*
+*默认
 1. <button open-type="contact" />
-2. 后台配置url, token
+2. 小程序后台, 客服反馈-客服人员配置
+3. 客服功能网页版
 	
 	
 	
