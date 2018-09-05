@@ -1,0 +1,7 @@
+.canvas{
+  display: block;
+  margin: 40rpx auto;
+  width: 600rpx;
+  height: 600rpx;
+  background: #fff;
+}
