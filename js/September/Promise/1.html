@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+	<script>
+		let fun = (n)=> {
+			return new Promise((resolve,f2)=>{
+				setTimeout(()=>{
+					console.log(new Date().getTime())
+					console.log('异步操作' + n++ + '执行完成');
+					resolve(n);
+				},1000)
+			})
+		}
+		let resolve = (n) => {
+			console.log('异步操作' + n + '开始执行');
+			return fun(n)
+		}
+		let resolveData = ()=> '直接返回数据';
+		let resolveNull = (data)=> {console.log(data)}   
+		//fun(1).then(resolve).then(resolveData).then(resolveNull)
+		
+		//console.log(fun(1).then(resolve).then(resolveData))
+		//Promise.all([fun(1),fun(2),fun(3)]).then((data)=>{console.log(data)})
+		Promise.race([fun(1),fun(2),fun(3)]).then((data)=>{console.log(data)})
+	</script>
+
+</body>
+</html>

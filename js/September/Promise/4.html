@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+	<script>
+		let t1 = () => {
+			return new Promise((f1,f2)=>{
+				setTimeout(()=>{
+					f1('success')
+				},3000)
+			})
+		}
+		
+		let t2 = () => {
+			return new Promise((f1,f2)=>{
+				setTimeout(()=>{
+					f2('fail')
+				},2000)
+			})
+		}
+		
+		let fn = (data) => {console.log(data)}
+		Promise
+		.race([t1(),t2()])
+		.then(fn)
+		.catch(fn)
+	</script>
+
+</body>
+</html>
