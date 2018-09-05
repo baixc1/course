@@ -1,0 +1,10 @@
+<import src="/util/grid/index.axml"/>
+<view>
+    <view class="slogon">
+        <image src="/image/logo.png" mode="scaleToFill" class="logo"/>
+        <view class="info">
+            <text class="desc">为你提供一些常用组件</text>
+        </view>
+    </view>
+    <template is="grid" data="{{...arr}}"/>
+</view>
