@@ -10,6 +10,17 @@
     "page/component/text/text",
     "page/component/icon/icon",
     "page/component/progress/progress",
+    "page/component/button/button",
+    "page/component/checkbox/checkbox",
+    "page/component/form/form",
+    "page/component/input/input",
+    "page/component/label/label",
+    "page/component/picker-view/picker-view",
+    "page/component/picker/picker",
+    "page/component/radio/radio",
+    "page/component/slider/slider",
+    "page/component/switch/switch",
+    "page/component/textarea/textarea",
 
     "page/API/index/index",
     "page/biz/index"
