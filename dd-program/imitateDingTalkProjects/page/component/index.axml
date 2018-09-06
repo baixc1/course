@@ -1,4 +1,6 @@
 <import src="/util/grid/index.axml"/>
+<import src="/util/items/index.axml" />
+
 <view>
     <view class="slogon">
         <image src="/image/logo.png" mode="scaleToFill" class="logo"/>
@@ -8,3 +10,5 @@
     </view>
     <template is="grid" data="{{...arr}}"/>
 </view>
+
+<template is="items" data="{{hidden: hidden, list: arr.list[curIndex], onChildItemTap: arr.onChildItemTap, animMaskData, animContentData}}" />

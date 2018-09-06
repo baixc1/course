@@ -1,3 +1,14 @@
+import animModal from '/util/items'
+
+const lastComponents = [
+  {
+    icon: '/image/canvas.png',
+    title: '画布',
+    entitle: 'Canvas',
+    page: 'canvas',
+  },
+];
+
 Page({
   data: {
     arr: {
@@ -143,7 +154,35 @@ Page({
           title: '媒体组件',
           entitle: 'Media', page: 'image',
         }, 
+        ...lastComponents
       ],
     },
-  }
+    hidden: true,
+    curIndex: 0,
+  },
+  ...animModal.animOp,
+  //点击网格
+  onGridItemTap(e){
+    const d = this.data
+    const curIndex = e.currentTarget.dataset.index
+    const childList = d.arr.list[curIndex]
+    if(childList.subs){
+      this.setData({
+        hidden: !d.hidden,
+        curIndex
+      })
+      this.createMaskShowAnim();
+      this.createContentShowAnim();
+    }
+  },
+  //点击右上角按钮关闭弹窗
+  onModalCloseTap() {
+    this.createMaskHideAnim();
+    this.createContentHideAnim();
+    setTimeout(() => {
+      this.setData({
+        hidden: true,
+      });
+    }, 210);
+  },
 });
