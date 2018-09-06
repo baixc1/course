@@ -173,6 +173,12 @@ Page({
       })
       this.createMaskShowAnim();
       this.createContentShowAnim();
+    }else{
+      this.onChildItemTap({
+        currentTarget: {
+          dataset: { page: childList.page },
+        },
+      })
     }
   },
   //点击右上角按钮关闭弹窗
@@ -185,4 +191,11 @@ Page({
       });
     }, 210);
   },
+  //点击网格子元素，跳转页面
+  onChildItemTap(e){
+    const {page} = e.currentTarget.dataset
+    dd.navigateTo({
+      url: `${page}/${page}`
+    })
+  }
 });

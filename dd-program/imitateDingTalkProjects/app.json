@@ -1,6 +1,13 @@
 {
   "pages": [
     "page/component/index",
+    "page/component/canvas/canvas",
+    "page/component/image/image",
+    "page/component/navigator/navigator",
+    "page/component/view/view",
+    "page/component/scroll-view/scroll-view",
+    "page/component/swiper/swiper",
+
     "page/API/index/index",
     "page/biz/index"
   ],
