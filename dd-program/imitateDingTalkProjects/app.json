@@ -7,6 +7,9 @@
     "page/component/view/view",
     "page/component/scroll-view/scroll-view",
     "page/component/swiper/swiper",
+    "page/component/text/text",
+    "page/component/icon/icon",
+    "page/component/progress/progress",
 
     "page/API/index/index",
     "page/biz/index"
