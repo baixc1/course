@@ -1,8 +1,8 @@
 <view class="list" bindtap="change">
   <view wx:for="{{list}}" class="{{index == activeIndex ? 'active' : ''}}" data-index="{{index}}">{{item}}</view>
 </view>
-<view style="height: 1000000px">
-  <image wx:if="{{index<1000}}" src="{{item}}" wx:for="{{arr}}"></image>
+<view style="height: 50000px">
+  <image wx:if="{{index<100}}" src="{{item}}" wx:for="{{arr}}"></image>
 </view>
 
 
