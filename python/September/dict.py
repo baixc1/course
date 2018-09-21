@@ -123,6 +123,17 @@
 # print("over %d" % n)
 
 #6.6.2 for
-fields = ['a','b','c']
-for f in fields:
-    print(f)
+# fields = ['a','b','c']
+# for f in fields:
+#     print(f)
+
+#6.6.3 for字典 序列解包
+# tups = {'name': '小智','number': '1002'}
+# print(tups.items())
+# for i in tups:
+#     print(i,tups[i])
+#  v
+# print("="*50)
+#
+# for i,j in tups.items():
+#     print(i,j)
