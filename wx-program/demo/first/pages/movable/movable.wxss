@@ -1,0 +1,10 @@
+movable-area{
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+movable-view{
+  width: 30px;
+  height: 30px;
+  background: green;
+}

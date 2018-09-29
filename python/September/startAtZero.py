@@ -335,4 +335,43 @@
 
 # print(list(filter(lambda x: x>3,[1,2,3,4,5,30])))
 
-# 7.12
+# 7.12 偏函数
+
+# from functools import partial
+#
+# def mod(n,m):
+#     return n % m
+#
+# mod_by_100 = partial(mod, 100)
+#
+# print(mod_by_100(7))  #mod(100,7)
+
+# 7.13快速排序
+def quicksort(L):
+    qsort(L,0,len(L)-1)
+
+def qsort(L,first,last):
+    if first<last:
+        split=partition(L,first,last)
+        qsort(L,first,split-1)
+        qsort(L,split+1,last)
+
+def partition(L,first,last):
+    pivot=L[first]
+    leftmark=first+1
+    rightmark=last
+    while True:
+        while L[leftmark]<=pivot:
+            if leftmark == rightmark:
+                break
+            leftmark+=1
+        while L[rightmark]>pivot:
+            rightmark-=1
+        if leftmark<rightmark:
+            L[leftmark],L[rightmark]=L[rightmark],L[leftmark]
+        else:
+            break
+    L[first],L[rightmark]=L[rightmark],L[first]
+    return rightmark
+
+print(quicksort([7,2,3,1,23]))

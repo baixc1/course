@@ -8,7 +8,8 @@
     "pages/advance/advance",
     "pages/shop/shop",
     "pages/moments/moments",
-    "pages/frame/frame"
+    "pages/frame/frame",
+    "pages/movable/movable"
   ],
   "window": {
     "navigationBarBackgroundColor": "#000",

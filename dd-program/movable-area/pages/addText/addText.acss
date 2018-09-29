@@ -1,0 +1,13 @@
+.wrap-top{
+  position: relative;
+}
+.modify-image{
+  width: 100%;
+  height: 460rpx;
+}
+.movable-view{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: red;
+}

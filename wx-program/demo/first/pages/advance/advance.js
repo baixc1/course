@@ -10,18 +10,11 @@ Page({
       text: 'frame', url: '../frame/frame'
       }, {
         text: '联系客服', type: 'contact'
+      },{
+        text: 'movable组件',url: '../movable/movable'
       }],
-    url: '../../images/ewm.png',
-    item: {
-      a: '1',
-      b: '2'
-    }
   },
   onLoad(){
-  },
-  formSubmit: function (e) {
-    debugger
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
   },
   changePage: function (e) {
     wx.navigateTo({ url: e.target.dataset.url })

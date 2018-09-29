@@ -1,0 +1,14 @@
+<view class="addText">
+  <view class="wrap-top">
+    <image src="{{url}}" 
+            mode="aspectFit" 
+            class="modify-image"
+            onLoad="modifyImgLoad"></image>
+    <view class="movable-view"
+          style="left:{{left}}px;top:{{top}}px"
+          onTouchStart="touchStart" 
+          onTouchMove="touchMove" 
+          onTouchEnd="touchEnd"
+          onTouchCancel="touchCancel">拖动我</view>
+  </view>
+</view>
