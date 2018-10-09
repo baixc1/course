@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			canvas{
+				box-sizing: border-box;
+				border: 1px solid #ddd;
+			}
+		</style>
+		<script>
+			let drawCanvas = (id,width,height)=> {
+				let context = document.getElementById(id).getContext('2d');
+				context.fillRect(0,0,width || 50,height || 50)
+			}
+			
+			window.onload = ()=> {
+				drawCanvas('canvas0')
+				drawCanvas('canvas1')
+				drawCanvas('canvas2')
+				drawCanvas('canvas3', 150, 150)
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<canvas id="canvas0"></canvas>	<!-- 组件 和 画布 , 300 * 150-->
+		<canvas id="canvas1" width="100px" height="100px" style="width:200px;height:200px"></canvas> <!--  组件 200 * 200 , 画布 100 * 100  -->
+		<canvas id="canvas2" width="200px" height="200px"></canvas> <!--  组件 200 * 200 , 画布 200 * 200 -->
+		<canvas id="canvas3" style="width:200px;height:200px;"></canvas>	<!--  组件 200 * 200 , 画布 300 * 150 -->
+	</body>
+</html>
