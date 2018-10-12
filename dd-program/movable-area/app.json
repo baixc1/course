@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/addImg/addImg",
     "pages/addText/addText"
   ],
   "window": {
