@@ -347,31 +347,55 @@
 # print(mod_by_100(7))  #mod(100,7)
 
 # 7.13快速排序
+
+#排序函数，第一次排序
 def quicksort(L):
     qsort(L,0,len(L)-1)
 
+#排序函数，递归排序
 def qsort(L,first,last):
-    if first<last:
-        split=partition(L,first,last)
+    #first >= last 终止递归
+    if first < last:
+        #排序，返回中间部分下标
+        split = partition(L,first,last)
+        #左部分排序,first到split-1个
         qsort(L,first,split-1)
+        #右部分排序
         qsort(L,split+1,last)
 
 def partition(L,first,last):
-    pivot=L[first]
-    leftmark=first+1
-    rightmark=last
+    #选取列表第first个元素为划分元素
+    pivot = L[first]
+    #左起始查询位置
+    leftmark = first + 1
+    #右起始查询位置
+    rightmark = last
+    #循环归位left部分和right部分
     while True:
-        while L[leftmark]<=pivot:
+        #从左向右，找比pivot大的值
+        while L[leftmark] < pivot:
+            #限制查找范围，避免越界
             if leftmark == rightmark:
                 break
-            leftmark+=1
-        while L[rightmark]>pivot:
-            rightmark-=1
-        if leftmark<rightmark:
-            L[leftmark],L[rightmark]=L[rightmark],L[leftmark]
+            leftmark += 1
+
+        #从右向左，找比pivot小的值
+        while L[rightmark] > pivot:
+            rightmark -= 1
+
+        #左右查找未相交，继续查找
+        if leftmark < rightmark:
+            L[leftmark],L[rightmark] = L[rightmark],L[leftmark]
+
+        #该次查询完毕
         else:
             break
-    L[first],L[rightmark]=L[rightmark],L[first]
+
+    #划分元素放到中间部分，rightmark下标值小于pivot
+    L[first],L[rightmark] = L[rightmark],L[first]
     return rightmark
 
-print(quicksort([7,2,3,1,23]))
+arr_sort = [5,6,10,1,2,3,4]
+quicksort(arr_sort)
+
+print(arr_sort)
