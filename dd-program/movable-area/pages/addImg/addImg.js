@@ -166,7 +166,7 @@ Page({
       translateX: moveViewLeft,
       translateY: moveViewTop,
       originX: moveViewLeft + moveViewWidth / 2,
-      originY: moveViewLeft + moveViewHeight / 2,
+      originY: moveViewTop + moveViewHeight / 2,
       showImgWidth: showImgWidth,
       showImgHeight: showImgHeight
     })
@@ -185,11 +185,9 @@ Page({
     let newOriginX = d.originX - moveViewLeft   //画布旋转中心
     let newOriginY = d.originY - moveViewTop
 
-
     context.translate(newOriginX,newOriginY)    //旋转中心
     context.scale(d.zoomMul * 0.8,d.zoomMul * 0.8)
     context.rotate(d.rotateAngle * Math.PI / 180)
-  
     context.drawImage(d.url1,d.translateX - moveViewLeft - newOriginX,d.translateY-moveViewTop-newOriginY,moveViewWidth,moveViewHeight)
 
     context.restore()
