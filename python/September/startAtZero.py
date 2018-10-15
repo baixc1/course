@@ -349,53 +349,103 @@
 # 7.13快速排序
 
 #排序函数，第一次排序
-def quicksort(L):
-    qsort(L,0,len(L)-1)
+# def quicksort(L):
+#     qsort(L,0,len(L)-1)
+#
+# #排序函数，递归排序
+# def qsort(L,first,last):
+#     #first >= last 终止递归
+#     if first < last:
+#         #排序，返回中间部分下标
+#         split = partition(L,first,last)
+#         #左部分排序,first到split-1个
+#         qsort(L,first,split-1)
+#         #右部分排序
+#         qsort(L,split+1,last)
+#
+# def partition(L,first,last):
+#     #选取列表第first个元素为划分元素
+#     pivot = L[first]
+#     #左起始查询位置
+#     leftmark = first + 1
+#     #右起始查询位置
+#     rightmark = last
+#     #循环归位left部分和right部分
+#     while True:
+#         #从左向右，找比pivot大的值
+#         while L[leftmark] < pivot:
+#             #限制查找范围，避免越界
+#             if leftmark == rightmark:
+#                 break
+#             leftmark += 1
+#
+#         #从右向左，找比pivot小的值
+#         while L[rightmark] > pivot:
+#             rightmark -= 1
+#
+#         #左右查找未相交，继续查找
+#         if leftmark < rightmark:
+#             L[leftmark],L[rightmark] = L[rightmark],L[leftmark]
+#
+#         #该次查询完毕
+#         else:
+#             break
+#
+#     #划分元素放到中间部分，rightmark下标值小于pivot
+#     L[first],L[rightmark] = L[rightmark],L[first]
+#     return rightmark
+#
+# arr_sort = [5,6,10,1,2,3,4]
+# quicksort(arr_sort)
+#
+# print(arr_sort)
 
-#排序函数，递归排序
-def qsort(L,first,last):
-    #first >= last 终止递归
-    if first < last:
-        #排序，返回中间部分下标
-        split = partition(L,first,last)
-        #左部分排序,first到split-1个
-        qsort(L,first,split-1)
-        #右部分排序
-        qsort(L,split+1,last)
+#(1)
+# num = 15
+# print('num的16进制：'+hex(num)[-1])
 
-def partition(L,first,last):
-    #选取列表第first个元素为划分元素
-    pivot = L[first]
-    #左起始查询位置
-    leftmark = first + 1
-    #右起始查询位置
-    rightmark = last
-    #循环归位left部分和right部分
-    while True:
-        #从左向右，找比pivot大的值
-        while L[leftmark] < pivot:
-            #限制查找范围，避免越界
-            if leftmark == rightmark:
-                break
-            leftmark += 1
+#(2)
+# import math
+# def quadratic(a,b,c):
+#     return (-b+math.sqrt(b**2-4*a*c))/2*a,(-b-math.sqrt(b**2-4*a*c))/2*a
+#
+# print(quadratic(3,2,-1))
 
-        #从右向左，找比pivot小的值
-        while L[rightmark] > pivot:
-            rightmark -= 1
+#(3)
+# def mostLetter(str):
+#     str_list = list(str)
+#     obj = {}
+#     n = 0
+#     for n in str:
+#         low = n.lower()
+#         if 97 <= ord(low) <= 122:
+#             obj[low] = str_list.count(n.upper()) + str_list.count(low)
+#
+#     max = ''
+#     maxs = ''
+#     for i,j in obj.items():
+#         if max == '':
+#             maxs = i
+#             max = j
+#         else:
+#             if j > max:
+#                 maxs = i
+#                 max = j
+#             elif j == max:
+#                 if ord(i) < ord(maxs):
+#                     maxs = i
+#                     max = j
+#     return maxs
+# print(mostLetter('one 11111noe'))
 
-        #左右查找未相交，继续查找
-        if leftmark < rightmark:
-            L[leftmark],L[rightmark] = L[rightmark],L[leftmark]
+# 8.2 类的定义和使用
 
-        #该次查询完毕
-        else:
-            break
-
-    #划分元素放到中间部分，rightmark下标值小于pivot
-    L[first],L[rightmark] = L[rightmark],L[first]
-    return rightmark
-
-arr_sort = [5,6,10,1,2,3,4]
-quicksort(arr_sort)
-
-print(arr_sort)
+# class MyClass:
+#     i = 0
+#     def __init__(self,name):
+#         self.i = name
+#     def f(self):
+#         return 'hello world'
+#
+# use_class = MyClass('2')
+# print(use_class.i,use_class.f())
