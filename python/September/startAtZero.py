@@ -449,3 +449,188 @@
 #
 # use_class = MyClass('2')
 # print(use_class.i,use_class.f())
+
+# class Student:
+#     def __init__(self,name,score):
+#         self.name = name
+#         self.__score = score
+#
+#     def info(self):
+#         print('学生： %s; 分数： %s' % (self.name,self.__score))
+#
+#     def set_score(self,score):
+#         self.__score = score
+#
+#     def __foo(self):
+#         print('这是私有方法')
+#
+# stu = Student('xiaoming', 90)
+#
+# stu.info()
+# stu.name = 'xiaohong'
+# stu.__score = 0
+#
+# stu.info()
+# stu.set_score('80')
+# stu.info()
+# stu.__foo()
+
+#8.4 继承 + 多态
+# class Animal:
+#     def run(self):
+#         print('Animal is runing')
+#
+#     def __run(self):
+#         print('i am a private method')
+#
+# class Dog(Animal):
+#     pass
+#
+# class Cat(Animal):
+#     pass
+#
+# dog = Dog()
+# dog.run()
+# # dog.__run()
+#
+# print(isinstance(dog,Dog))
+# print(isinstance(dog,Animal))
+#
+# def run_two_times(animal):
+#     animal.run()
+#     animal.run()
+#
+# class Bird(Animal):
+#     def run(self):
+#         print('Bird Fly')
+#
+# run_two_times(Bird())
+
+
+#8.7多重继承
+# class Animal:
+#     pass
+#
+# #大类
+# class Mammal(Animal):
+#     pass
+#
+# class Bird(Animal):
+#     pass
+#
+# #各种动物
+# class Dog(Mammal):
+#     pass
+#
+# class Bat(Mammal):
+#     pass
+#
+# class Parrot(Bird):
+#     pass
+#
+# class Ostrich(Bird):
+#     pass
+#
+# class Runnable:
+#     def run(self):
+#         print('Running...')
+#
+# class Flyable:
+#     def fly(self):
+#         print('Flying...')
+#
+# class Dog(Mammal,Runnable):
+#     pass
+
+# 8.8获取对象信息
+#type()
+# print(type(type(1)))
+#
+# import types
+# def fun():
+#     pass
+# print(type(fun))
+# print(types.FunctionType)
+
+#isinstance()
+# class Animal:
+#     pass
+#
+# print(isinstance(Animal(), object))
+# print(isinstance([1,2,3],list))
+# print(isinstance(1.0,float))
+
+#dir()
+# print(dir(1))
+
+#8.8 类的专有方法
+# class Student:
+#     def __init__(self,name):
+#         self.name = name
+#
+#     def __str__(self):
+#         return self.name
+#
+# stu = Student('xiaoli')
+# print(stu)
+
+# class Fib:
+#     def __init__(self):
+#         self.a,self.b = 0,1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.a,self.b = self.b,self.a+self.b
+#         if self.a > 100000:
+#             raise StopIteration()
+#         return self.a
+#
+# fib = Fib()
+# for n in fib:
+#     print(n)
+
+class WeatherSearch:
+    def __init__(self,input_daytime):
+        self.input_daytime = input_daytime
+
+    def search_visibility(self):
+        visible_leave = 0
+        if self.input_daytime == 'daytime':
+            visible_leave = 2
+        if self.input_daytime == 'night':
+            visible_leave = 9
+        return visible_leave
+
+    def search_temperature(self):
+        temperature = 0
+        if self.input_daytime == 'daytime':
+            temperature = 26
+        if self.input_daytime == 'night':
+            temperature = 16
+        return temperature
+
+class OutAdvice(WeatherSearch):
+    def __init__(self,input_daytime):
+        WeatherSearch.__init__(self,input_daytime)
+
+    def search_temperature(self):
+        vehicle = ''
+        if self.input_daytime == 'daytime':
+            vehicle = 'bike'
+        if self.input_daytime == 'night':
+            vehicle = 'taxi'
+        return vehicle
+
+    def out_advice(self):
+        visible_leave = self.search_visibility()
+        if visible_leave == 2:
+            print('good weather %s' % self.search_temperature())
+        elif visible_leave == 9:
+            print('bad weather %s' % self.search_temperature())
+        else:
+            print('no scope')
+
+check = OutAdvice('daytime')
+check.out_advice()
