@@ -591,46 +591,136 @@
 # for n in fib:
 #     print(n)
 
-class WeatherSearch:
-    def __init__(self,input_daytime):
-        self.input_daytime = input_daytime
+# class WeatherSearch:
+#     def __init__(self,input_daytime):
+#         self.input_daytime = input_daytime
+#
+#     def search_visibility(self):
+#         visible_leave = 0
+#         if self.input_daytime == 'daytime':
+#             visible_leave = 2
+#         if self.input_daytime == 'night':
+#             visible_leave = 9
+#         return visible_leave
+#
+#     def search_temperature(self):
+#         temperature = 0
+#         if self.input_daytime == 'daytime':
+#             temperature = 26
+#         if self.input_daytime == 'night':
+#             temperature = 16
+#         return temperature
+#
+# class OutAdvice(WeatherSearch):
+#     def __init__(self,input_daytime):
+#         WeatherSearch.__init__(self,input_daytime)
+#
+#     def search_temperature(self):
+#         vehicle = ''
+#         if self.input_daytime == 'daytime':
+#             vehicle = 'bike'
+#         if self.input_daytime == 'night':
+#             vehicle = 'taxi'
+#         return vehicle
+#
+#     def out_advice(self):
+#         visible_leave = self.search_visibility()
+#         if visible_leave == 2:
+#             print('good weather %s' % self.search_temperature())
+#         elif visible_leave == 9:
+#             print('bad weather %s' % self.search_temperature())
+#         else:
+#             print('no scope')
+#
+# check = OutAdvice('daytime')
+# check.out_advice()
 
-    def search_visibility(self):
-        visible_leave = 0
-        if self.input_daytime == 'daytime':
-            visible_leave = 2
-        if self.input_daytime == 'night':
-            visible_leave = 9
-        return visible_leave
 
-    def search_temperature(self):
-        temperature = 0
-        if self.input_daytime == 'daytime':
-            temperature = 26
-        if self.input_daytime == 'night':
-            temperature = 16
-        return temperature
+# class Animal:
+#     def __init__(self,name):
+#         self.name = name
+#
+#     def showName(self):
+#         print('i am %s' % self.name)
+#
+#     def showType(self):
+#         print('%s is animal' % self.name)
+#
+# class Mammal(Animal):
+#     def showType(self):
+#         print('%s is a mammal' % self.name)
+#
+# class Bird(Animal):
+#     def showType(self):
+#         print('%s is a bird' % self.name)
+#
+# class Fly:
+#     def action(self):
+#         print('i can fly')
+#
+# class Run:
+#     def action(self):
+#         print('%s can run' % self.name)
+#
+# class Dog(Mammal,Run):
+#     def showType(self):
+#         print('%s is a dog' % self.name)
+#
+# class Bat(Mammal,Fly):
+#     pass
+#
+# class Parrot(Bird):
+#     pass
+#
+# class Ostrich(Bird):
+#     pass
+#
+# dog = Dog('gougou')
+# dog.showName()
+# dog.action()
+# dog.showType()
+#
+# bat = Bat('bb')
+# bat.showName()
+# bat.action()
+# bat.showType()
 
-class OutAdvice(WeatherSearch):
-    def __init__(self,input_daytime):
-        WeatherSearch.__init__(self,input_daytime)
+#9 异常
+# raise Exception
 
-    def search_temperature(self):
-        vehicle = ''
-        if self.input_daytime == 'daytime':
-            vehicle = 'bike'
-        if self.input_daytime == 'night':
-            vehicle = 'taxi'
-        return vehicle
+# raise NameError('This is NameError')
 
-    def out_advice(self):
-        visible_leave = self.search_visibility()
-        if visible_leave == 2:
-            print('good weather %s' % self.search_temperature())
-        elif visible_leave == 9:
-            print('bad weather %s' % self.search_temperature())
-        else:
-            print('no scope')
+# try:
+#     raise NameError('this is NameError')
+# except NameError:
+#     print('a NameError happened')
+#     raise
 
-check = OutAdvice('daytime')
-check.out_advice()
+#捕捉对象
+# def model_exception(x,y):
+#     try:
+#         b = name
+#         a = x/y
+#     except(ZeroDivisionError,NameError,TypeError) as e:
+#         print(e)
+# model_exception(2,0)
+
+# class MyError(Exception):
+#     def __init__(self):
+#         pass
+#     def __str__(self):
+#         return 'this is self define error'
+#
+# def my_error_test():
+#     try:
+#         raise MyError()
+#     except Exception as e:
+#         print(e)
+#
+# my_error_test()
+
+#日期和时间
+# import time
+# print(time.time()/3600/24/365)
+#
+# print(time.localtime())
