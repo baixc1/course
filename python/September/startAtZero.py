@@ -724,3 +724,56 @@
 # print(time.time()/3600/24/365)
 #
 # print(time.localtime())
+# print(time.gmtime())
+# print(time.time())
+# print(time.mktime(time.gmtime()))
+# print(time.mktime((2018,10,18,0,54,25,3,291,0)))
+# print(time.asctime(time.localtime()))
+# print(time.time())
+# print(time.perf_counter())
+# time.sleep(5)
+# print(time.time())
+# print(time.perf_counter())
+
+# 10.3datetime模块
+# import datetime
+# print(datetime.datetime.today())
+# print(datetime.datetime.now())
+# print(datetime.datetime.utcnow())
+
+# import time,datetime
+# print(datetime.datetime.fromtimestamp((time.time())))
+# print(datetime.datetime.utcfromtimestamp((time.time())))
+# from datetime import datetime as d
+# print(type(d.now()))
+# print(type(d.strptime(str(d.now()),'%Y-%m-%d %H:%M:%S.%f')))
+# print(d.now().strftime('%Y-%m-%d %H:%M:%S'))
+
+# from datetime import datetime as dt
+# now = dt.now()
+# print(now)
+# print(type(now))
+# print(now.strftime('%a'))
+# print(now.strftime('%Y'))
+
+#re模块
+# import re
+# print(re.match('hello','hello world').span())
+# print(re.match('world','hello world'))
+# print(re.search('hello','hello world').span())
+# print(re.search('wor','hello world').span())
+
+# import re
+# line = 'Cats are smarter dogs than dogs'
+#
+# matchObj = re.search('dogs',line,re.M|re.I)
+# print(matchObj.group(0))
+# print(matchObj.groups())
+
+# import re
+# print(re.match(r'^(\d+?)(0*)$','102300').group())
+# print(re.match(r'^(\d*?)(0*)$','102300').group(1))
+# print(re.match(r'^(.*?)(0*)$','102300').group(2))
+# print(re.match(r'^(.*?)(0*)$','102300').groups())
+# print(re.match(r'(\d+?)(0+)','11200300').groups())
+# print(re.match(r'(\d+?)(0+?)','11200300').groups())
