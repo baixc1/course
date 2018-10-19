@@ -777,3 +777,21 @@
 # print(re.match(r'^(.*?)(0*)$','102300').groups())
 # print(re.match(r'(\d+?)(0+)','11200300').groups())
 # print(re.match(r'(\d+?)(0+?)','11200300').groups())
+
+#11.4 替换
+# import re
+# phone = '2000-22-58 # 这是外国的手机号'
+# print(re.sub(r'#.*','',phone))
+# print(re.sub(r'\D','',phone))
+#
+# re_phone = re.compile(r'#.*$')
+# print(re_phone.sub('',phone))
+
+#12.1 打开文件
+# path = '1.py'
+# print(open(path).name)
+# path = './test.txt'
+# print(open(path,'w').name)
+# open('2.txt','w')
+
+#I/O 内存-磁盘/网络 Stream
