@@ -841,8 +841,8 @@ str_list = ['Hello world!\n','welcome!\n','welcome!\n']
 # print('='*50)
 # print(open('test.txt').readline())
 
-import fileinput
-path = 'test.txt'
+# import fileinput
+# path = 'test.txt'
 # for line in fileinput.input(path):
 #     print('line is ',line)
 
@@ -852,11 +852,119 @@ path = 'test.txt'
 #
 # f_name.close()
 
-from io import StringIO
+# from io import StringIO
 
 # io_val = StringIO()
 # io_val.write('hello 1')
 # print(io_val.getvalue())
 
-io_val = StringIO('world')
-print(io_val.readline())
+# io_val = StringIO('Hello\nworld\nwelcome')
+# print(io_val.readline())
+# print(io_val.readline())
+# print(io_val.readline())
+# print('='*50)
+# print(io_val.readline())
+# print('='*50)
+# print(io_val.readline())
+# print('='*50)
+# print(io_val.readline())
+# print('='*50)
+
+# 12.5 序列化与反序列化
+#pickle
+# import pickle
+# d = dict(name='xiao zhi',num=1002)
+# print(pickle.dumps(d))
+# f_name = open('dump.txt','wb')
+# pickle.dump(d,f_name)
+# f_name.close()
+#
+# try:
+#     f_name = open('dump.txt','rb')
+#     print(pickle.load(f_name))
+# finally:
+#     f_name.close()
+
+#JSON
+# import json
+# data = {'num': 1002,'name': 'xiao ming'}
+# json_str = json.dumps(data)
+# print(data,json_str)
+#
+# print('='*50)
+# data2 = json.loads(json_str)
+# print(data2)
+#
+# with open('dump.txt','w') as f:
+#     json.dump(data,f)
+
+# with open('dump.txt','r') as f:
+#     data = json.load(f)
+#
+# print(data)
+
+#12.6 调试
+# str_val = '1 2\t 3\n 4  5  6'
+# # print(str_val)
+# # print(repr(str_val))
+
+#练习
+#迭代
+path = './test.txt'
+# f_name = open(path,'w')
+# print(f_name.write('Hello w\nddddd'))
+# f_name = open(path)
+#每次向后读一个
+# print(f_name.read(1))
+# print(f_name.read(1))
+
+#读取行
+# f_name = open(path)
+# print('='*50)
+# print(f_name.readline())
+# print(f_name.readline(2))
+# f_name = open(path)
+# print(f_name.readline(4))
+
+#文件对象迭代
+# f_name = open(path)
+# for line in f_name:
+#     print('='*40)
+#     print(line)
+
+#诗
+# import re
+# path = 'poem.txt'
+#写诗
+# def write_poem(path):
+#     f_name = open(path,'w',encoding='utf8').write('\t一四七\n一二三四五六七，\n七六五四三二一。')
+#
+# write_poem('test.txt')
+
+#替换文件中某字
+# def replace_text(path,old,new):
+#     f_str = open(path,encoding='utf8').read()
+#     f_str = f_str.replace(old,new)
+#     open(path,'w',encoding='utf8').write(f_str)
+#
+# replace_text(path,'四','九')
+
+#计算文件中中文各字出现频率
+# def frequency(inPath,outPath):
+#     dict = {}
+#     f_str = open(path,encoding='utf8').read()
+#     for i in f_str:
+#         if '\u4e00' <= i <= '\u9fff':
+#             if i in dict:
+#                 dict[i] += 1
+#             else:
+#                 dict[i] = 0
+#     out_str = ''
+#     for i,j in dict.items():
+#         out_str += i + ':' + str(j) + '\n'
+#     open(outPath,'w',encoding='utf8').write(out_str)
+#
+# frequency(path,'dump.txt')
+
+
+
