@@ -2,7 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/canvas/canvas",
-    "pages/canvas1/canvas1"
+    "pages/canvas1/canvas1",
+    "pages/scroll/scroll",
+    "pages/swiper/swiper",
+    "pages/animate/animate"
   ],
   "window": {
     "defaultTitle": "My App"

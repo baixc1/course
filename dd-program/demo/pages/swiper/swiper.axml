@@ -1,0 +1,11 @@
+<swiper circular=true>
+  <swiper-item  a:for="{{list}}">
+    <view style="height:100px;background:{{item}}"></view>
+  </swiper-item>
+</swiper>
+
+<swiper style="margin-top: 10px">
+  <swiper-item class="item" a:for="{{list}}">
+    <view style="width:300px;height:100px;background:{{item}}"></view>
+  </swiper-item>
+</swiper>
