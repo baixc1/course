@@ -795,3 +795,68 @@
 # open('2.txt','w')
 
 #I/O 内存-磁盘/网络 Stream
+# path = 'test.txt'
+# print(open(path,'r').read())
+# print(open(path,'w').write('054321'))
+# print(open(path,'r').read())
+# print(open(path,'a').write('9876'))
+# print(open(path,'r').read())
+
+# print(open(path,'a').write('\nabc'))
+# print(open(path,'r').read())
+
+#12.2.2 读写行
+path = 'test.txt'
+# print(open(path,'r').readline())
+# print(open(path,'r').readlines(100))
+str_list = ['Hello world!\n','welcome!\n','welcome!\n']
+# print(open(path,'w').writelines(str_list))
+# print(open(path,'r').read())
+# print(open(path,'r').readlines())
+
+# f_name = open(path,'w')
+# print(f_name.writelines(str_list))
+# f_name = open(path,'r')
+# print(f_name.read())
+# f_name = open(path,'r')
+# print(f_name.readlines())
+# f_name.close()
+
+# with open(path,'w') as f:
+#     f_name = open(path,'w')
+#     print(f_name.write('Hello world'))
+
+#12.2.4 文件重命名
+# import os
+# open('./test1.txt','w')
+# os.rename('test1.txt','test2.txt')
+# os.remove('test2.txt')
+
+# open('test.txt','w').write('hello\nworld')
+# print(open('test.txt','r').read(100))
+# print('='*50)
+# print(open('test.txt').readline(100))
+# print('='*50)
+# print(open('test.txt').readline(-1))
+# print('='*50)
+# print(open('test.txt').readline())
+
+import fileinput
+path = 'test.txt'
+# for line in fileinput.input(path):
+#     print('line is ',line)
+
+# f_name = open(path)
+# for line in f_name:
+#     print('line is',line)
+#
+# f_name.close()
+
+from io import StringIO
+
+# io_val = StringIO()
+# io_val.write('hello 1')
+# print(io_val.getvalue())
+
+io_val = StringIO('world')
+print(io_val.readline())
