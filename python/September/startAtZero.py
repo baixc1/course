@@ -966,5 +966,143 @@ path = './test.txt'
 #
 # frequency(path,'dump.txt')
 
+#13.3 _thread模块
+# import _thread
+# from time import sleep
+# from datetime import datetime
+#
+# date_time_format = '%y-%m-%d %H:%M:%S'
+#
+# def date_time_str(date_time):
+#     return datetime.strftime(date_time,date_time_format)
+#
+# def loop_one():
+#     print('线程1开始于：',date_time_str(datetime.now()))
+#     sleep(2)
+#     print('线程1结束于：',date_time_str(datetime.now()))
+#
+# def loop_two():
+#     print('线程2开始于：',date_time_str(datetime.now()))
+#     sleep(1)
+#     print('线程2结束于：',date_time_str(datetime.now()))
+#
+# def main():
+#     _thread.start_new_thread(loop_one,())
+#     _thread.start_new_thread(loop_two,())
+#     sleep(3)
+#
+# if __name__ == '__main__':
+#     main()
 
+# import _thread
+# from time import sleep
+# from datetime import datetime
+#
+# loops = [4,2]
+# date_time_format = '%y %m %d %H %M %S'
+#
+# def date_time_str():
+#     return datetime.now().strftime(date_time_format)
+#
+# def loop(n_loop,n_sec,lock):
+#     print('线程%s开始执行于：%s'%(n_loop,date_time_str()))
+#     sleep(n_sec)
+#     print('线程%s结束'%n_loop)
+#     lock.release()          #解锁
+#
+# def main():
+#     locks = []
+#     n_loops = range(len(loops))
+#     for i in n_loops:
+#         lock = _thread.allocate_lock()      #分配锁对象
+#         lock.acquire()              #获取锁对象（锁上）
+#         locks.append(lock)          #锁列表
+#
+#     for i in n_loops:
+#         _thread.start_new_thread(loop,(i+1,loops[i],locks[i]))
+#
+#     for i in n_loops:
+#         while locks[i].locked(): pass       #暂停主线程
+#
+# if __name__ == '__main__':
+#     main()
 
+#13.4 threading模块
+
+# import threading
+# from time import sleep
+# from datetime import datetime
+#
+# loops = [4,2]
+# date_time_format = '%y-%m-%d %H:%M:%S'
+#
+# def date_time_str():
+#     return datetime.now().strftime(date_time_format)
+#
+# def loop(n_loop,n_sec):
+#     print('线程%d开始于：%s，休眠%d秒'%(n_loop,date_time_str(),n_sec))
+#     sleep(n_sec)
+#     print('线程%d结束于：%s'%(n_loop,date_time_str()))
+#
+# def main():
+#     threads = []
+#     n_loops = range(len(loops))
+#
+#     for i in n_loops:
+#         t = threading.Thread(target=loop,args=(i+1,loops[i]))
+#         threads.append(t)
+#
+#     for i in n_loops:
+#         threads[i].start()
+#
+#     for i in n_loops:
+#         threads[i].join()
+#
+# if __name__ == '__main__':
+#     main()
+
+#13.5 线程同步 Lock acquire relase
+import threading
+from time import sleep
+from datetime import datetime
+
+def print_time(threadName,delay,counter):
+    while counter:
+        sleep(counter)
+        print('%s %s'%(threadName,datetime.now().strftime('%H:%M:%S')))
+        counter -= 1
+
+class MyThrad(threading.Thread):
+    def __init__(self,threadID,name,counter):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.name = name
+        self.counter = counter
+
+    def run(self):
+        print('开启线程' + self.name + ' ' + datetime.now().strftime('%H:%M:%S'))
+        #锁定
+        threadLock.acquire()
+        print_time(self.name,self.counter,3)
+        #释放锁
+        threadLock.release()
+
+def main():
+    #创建线程
+    thread1 = MyThrad(1,'Thread-1',1)
+    thread1.start()
+    thread2 = MyThrad(2,'Thread-2',2)
+    thread2.start()
+    print('\n继续执行')
+    threads = [thread1,thread2]
+    #等待线程完成
+    for t in threads:
+        t.join()
+
+    print('等待执行')
+
+if __name__ == '__main__':
+    #创建锁
+    threadLock = threading.Lock()
+    threads = []
+    main()
