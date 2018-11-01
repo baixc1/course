@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+	video{
+		width: 300px;
+		height: 200px;
+		background: red;
+		display: none;
+	}
+	canvas{
+		width: 300px;
+		height: 200px;
+	}
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+	<video id="video" controls=1>
+		<source src="http://video.pearvideo.com/mp4/adshort/20181031/cont-1466676-13154577_adpkg-ad_hd.mp4"></source>
+	</video>
+	<canvas id="canvas"/>
+</body>
+<script>
+	let $canvas = $('#canvas');
+	let video = $('#video')[0];
+	let ctx = canvas.getContext('2d')
+	video.currentTime = 10
+	
+	$canvas.on('click',()=>{
+		if(!video.paused && !video.ended){
+			video.pause()
+		}else{
+			video.play()
+			fun()
+		}
+	})
+	
+	let fun = ()=> {
+		if(!video.paused && !video.ended){
+			ctx.drawImage(video,0,0,300,200)
+			window.requestAnimationFrame(fun)
+		}
+	}
+	
+	
+	
+</script>
+</html>
