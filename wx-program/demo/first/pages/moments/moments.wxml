@@ -1,8 +1,9 @@
 <view class="list" bindtap="change">
   <view wx:for="{{list}}" class="{{index == activeIndex ? 'active' : ''}}" data-index="{{index}}">{{item}}</view>
 </view>
-<canvas bindtouchmove="move" canvas-id="myCanvas" style="border: 1px solid;"/>
-
-<view>
-  Coordinates: ({{x}}, {{y}})
+<view style="height: 50000px">
+  <image wx:if="{{index<100}}" src="{{item}}" wx:for="{{arr}}"></image>
 </view>
+
+
+

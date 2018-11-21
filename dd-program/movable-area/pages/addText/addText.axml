@@ -1,0 +1,28 @@
+<view class="addText">
+  <view class="wrap-top">
+    <image src="{{url}}" 
+            mode="aspectFit" 
+            class="modify-image"
+            onLoad="modifyImgLoad"></image>
+    <view class="movable-view"
+          style="left:{{left}}px;top:{{top}}px"
+          onTouchStart="touchStart" 
+          onTouchMove="touchMove" 
+          onTouchEnd="touchEnd"
+          onTouchCancel="touchCancel">
+      <view hidden="{{!isShowInput}}" class="movable-input-wrap">
+        <input class="movable-input" 
+              focus="{{focus}}"
+              onInput="bindInput"
+              onFocus="bindFocus"
+              onBlur="bindBlur"
+              value="{{inputValue}}"
+              placeholder="输入文字" />
+      </view>
+      <view class="movable-text" onTap="bindTextTap" hidden="{{isShowInput}}">{{textValue}}</view>      
+    </view>
+  </view>
+  <button onTap="generate">生成图片</button>
+</view>
+
+<canvas id="myCanvas" style="width:{{showImgWidth}};height:{{showImgHeight}}" />

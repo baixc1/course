@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "pages/addImg/addImg",
+    "pages/addText/addText"
+  ],
+  "window": {
+    "defaultTitle": "My App"
+  }
+}

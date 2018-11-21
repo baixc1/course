@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head></head>
+	<body></body>
+	<script>
+		//copy https://www.cnblogs.com/exhuasted/p/7920325.html
+		var EventTarget = function() {
+			this._listener = {};
+		};
+
+		EventTarget.prototype = {
+			constructor: this,
+			addEvent: function(type, fn) {
+				if (typeof type === "string" && typeof fn === "function") {
+					if (typeof this._listener[type] === "undefined") {
+						this._listener[type] = [fn];
+					} else {
+						this._listener[type].push(fn);    
+					}
+				}
+				return this;
+			},
+			fireEvent: function(type) {
+				if (type && this._listener[type]) {
+					for (var length = this._listener[type].length, start=0; start<length; start+=1) {
+						this._listener[type][start].call(this);
+					}
+				}
+				return this;
+			},
+		};
+		
+		var myEvents = new EventTarget();
+		myEvents.addEvent('a',()=>{console.log(2)});
+		myEvents.fireEvent('a');
+	</script>
+</html>

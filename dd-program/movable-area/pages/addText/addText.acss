@@ -1,0 +1,38 @@
+.wrap-top{
+  position: relative;
+}
+.modify-image{
+  width: 100%;
+  height: 460rpx;
+}
+.movable-view{
+  position: absolute;
+  width: 100px;
+  height: 40px;
+}
+.movable-input-wrap{
+  height: 100%;
+}
+.movable-input,
+.movable-text{
+  width: 100%;
+  height: 100%;
+}
+.movable-input{
+  padding: 0;
+}
+.movable-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: dashed #C2C2C2 1px;
+  font-weight: bold;
+}
+
+.canvas{
+  display: block;
+  margin: 40rpx auto;
+  width: 600rpx;
+  height: 600rpx;
+  background: #fff;
+}

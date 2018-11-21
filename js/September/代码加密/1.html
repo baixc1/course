@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script>
+	function compile(code) { 
+		//从第一个字符开始，每个字符加上前一个字符的值变为新值
+		var c = String.fromCharCode(code.charCodeAt(0) + code.length); 
+		for(var i=1;i<code.length;i++){ 
+			c += String.fromCharCode(code.charCodeAt(i)+code.charCodeAt(i-1)); 
+		} 
+		//字符串编码
+		return escape(c); 
+	} 
+	
+	function uncompile(code) { 
+		//字符串解码
+		code = unescape(code); 
+		//字符串还原
+		var c = String.fromCharCode(code.charCodeAt(0) - code.length); 
+		for(var i=1;i<code.length;i++){ 
+			c+=String.fromCharCode(code.charCodeAt(i) - c.charCodeAt(i-1)); 
+		} 
+		return c; 
+	} 
+	//eval(uncompile(compile('alert("《黑客防线》");'))); 
+</script>
+</html>

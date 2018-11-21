@@ -1,0 +1,39 @@
+.wrap-top{
+  position: relative;
+}
+.modify-image{
+  width: 100%;
+  height: 460rpx;
+}
+.movable-view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100rpx;
+  height: 100rpx;
+  border: 1px solid #ddd;
+}
+
+.move-small-img{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.move-arrow-img{
+  position: absolute;
+  bottom: -15rpx;right: -15rpx;
+  width: 40rpx;
+  height: 40rpx;
+  z-index: 100;
+}
+
+.canvas{
+  display: block;
+  margin: 40rpx auto;
+  width: 600rpx;
+  height: 600rpx;
+  background: #fff;
+}

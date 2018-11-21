@@ -1,5 +1,6 @@
 .list{
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 30rpx;
 }
 .list view{
@@ -11,5 +12,13 @@
   background: yellowgreen;
 }
 canvas{
-  height: 500rpx;
+  width: 400px;
+  height: 400px;
+}
+label{
+  display: flex;
+  background: red;
+  height: 24px;
+  line-height: 24px;
+  font-size: 22px;
 }

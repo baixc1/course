@@ -1,0 +1,7 @@
+<view class="swiper" onTouchMove="touchmove" onTouchStart="touchstart" onTouchEnd="touchend">
+  <view style="transition-duration: {{duration}}s;transform:translate({{x}}px,0)">
+    <view a:for="{{list}}" style="transition-duration: {{duration}}s;transform:translate({{100 * index}}%,0)" class="swiper-item">
+      <image src="{{item}}" mode="" />
+    </view>
+  </view>
+</view>

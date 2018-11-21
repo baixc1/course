@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+	<script>
+		let fun = ()=> {
+			return new Promise((resolve,reject)=>{
+				setTimeout(()=>{
+					let num = Math.ceil(Math.random() * 10)
+					console.log('点数为' + num)
+					if(num > 5){
+						resolve('压大')
+					}else{
+						reject('压小')
+					}
+				},1000)
+			})
+		}
+		
+		let resolve = reject = (data)=>{console.log(data)}
+		
+		fun().then(resolve, reject)
+	</script>
+
+</body>
+</html>

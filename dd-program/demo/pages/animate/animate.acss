@@ -1,0 +1,17 @@
+.swiper{
+  overflow: hidden;
+  position: relative;
+  height:380rpx;
+  margin:30rpx 0;
+}
+.swiper-item{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width:440rpx;
+  height:380rpx;
+}
+image{
+  width:380rpx;
+  height:380rpx;
+}

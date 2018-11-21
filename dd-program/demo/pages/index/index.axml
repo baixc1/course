@@ -1,0 +1,4 @@
+<view>
+  <view onTap="goPage">canvas</view>
+  <view onTap="goPage1">canvas1</view>
+</view>

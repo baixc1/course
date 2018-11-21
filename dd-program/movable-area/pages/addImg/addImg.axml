@@ -1,0 +1,20 @@
+<view class="addText">
+  <view class="wrap-top">
+    <image src="{{url}}" 
+            mode="aspectFit" 
+            class="modify-image"
+            onLoad="modifyImgLoad"></image>
+    <view class="movable-view"
+          style="transform-origin:{{originX}}px {{originY}}px 0;transform:rotate({{rotateAngle}}deg) scale({{zoomMul}}) translate({{translateX}}px,{{translateY}}px);">
+      <image onTouchStart="touchStart" 
+          onTouchMove="touchMove" 
+          data-moveType="view"
+          src="{{url1}}" 
+          class="move-small-img" />  
+      <image onTouchStart="touchStart" onTouchMove="touchMove" data-moveType="arrow" src="{{url2}}" class="move-arrow-img" />  
+    </view>
+  </view>
+  <button onTap="generate">生成图片</button>
+</view>
+
+<canvas id="myCanvas" width="{{showImgWidth}}" height="{{showImgHeight}}" style="width:{{showImgWidth}}px;height:{{showImgHeight}}px" />
