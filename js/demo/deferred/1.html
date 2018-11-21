@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<body>
+	</body>
+	<script>
+		function LoadImageAsync(url){
+	        var promise = new Promise(function(resolve,reject){
+	            var image = new Image();
+	            image.onload = function(){
+	                resolve(url); 
+	            };
+	            image.onerror = function(){
+	                reject(new Error('Could not load image '));
+	            };
+	            image.src = url;
+	        });
+	        return promise; 
+	    }
+		Promise.all([
+			LoadImageAsync("./images/1.jpg"),
+			LoadImageAsync("./images/2.jpg"),
+			LoadImageAsync("./images/3.jpg")
+		]).then(function(data){alert(JSON.stringify(data))});
+	</script>
+</html>
