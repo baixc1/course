@@ -1,0 +1,2 @@
+<view bindtap="changePage">go page circle2</view>
+<image src="{{src}}" />

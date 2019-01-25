@@ -1,0 +1,15 @@
+<view bindtap="changePage">go page circle1</view>
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />
+<image src="{{src}}" />

@@ -9,7 +9,9 @@
     "pages/shop/shop",
     "pages/moments/moments",
     "pages/frame/frame",
-    "pages/movable/movable"
+    "pages/movable/movable",
+    "pages/circle1/circle1",
+    "pages/circle2/circle2"
   ],
   "window": {
     "navigationBarBackgroundColor": "#000",

@@ -6,9 +6,11 @@ Page({
         text: 'loadmore+swiper', url: '../request/request'
     }, {
       text: 'components', url: '../components/components'
-    },  {
-      text: 'fragment', url: '../fragment/fragment'
-    }]
+      }, {
+        text: 'fragment', url: '../fragment/fragment'
+      }, {
+        text: 'goCircle', url: '../circle1/circle1'
+      }]
     
   },
   changePage: function(e){
