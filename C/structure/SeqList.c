@@ -1,15 +1,38 @@
 #include <stdio.h>
-
-typedef struct
-{
-    int list[10];
+#include <stdlib.h>
+#define Size 5
+typedef struct Table{
+    int * head;
     int length;
-} SeqList;
-int main()
-{
-
-    void InitListï¼ˆSeqList *Lï¼‰
+    int size;
+}table;
+table initTable(){
+    table t;
+    t.head=(int*)malloc(Size*sizeof(int));
+    if (!t.head)
     {
-        L->length = 0; // æŠŠçº¿æ€§è¡¨çš„é•¿åº¦è®¾ä¸º0
+        printf("³õÊ¼»¯Ê§°Ü");
+        exit(0);
     }
+    t.length=0;
+    t.size=Size;
+    return t;
+}
+//Êä³öË³Ðò±íÖÐÔªËØµÄº¯Êý
+void displayTable(table t){
+    for (int i=0;i<t.length;i++) {
+        printf("%d ",t.head[i]);
+    }
+    printf("\n");
+}
+int main(){
+    table t=initTable();
+    //ÏòË³Ðò±íÖÐÌí¼ÓÔªËØ
+    for (int i=1; i<=Size; i++) {
+        t.head[i-1]=i;
+        t.length++;
+    }
+    printf("Ë³Ðò±íÖÐ´æ´¢µÄÔªËØ·Ö±ðÊÇ£º\n");
+    displayTable(t);
+    return 0;
 }
