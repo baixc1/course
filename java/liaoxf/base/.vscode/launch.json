@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "base_f619cc3d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Two",
+            "request": "launch",
+            "mainClass": "Two",
+            "projectName": "base_f619cc3d"
+        }
+    ]
+}
