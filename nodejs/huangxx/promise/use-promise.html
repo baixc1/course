@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="user_form"></form>
+    <script type="text/template" id="tpl">
+        <div>
+          <label for="">用户名</label>
+          <input type="text" value="{{ user.username }}">
+        </div>
+        <div>
+          <label for="">年龄</label>
+          <input type="text" value="{{ user.age }}">
+        </div>
+        <div>
+          <label for="">职业</label>
+          <select name="" id="">
+            {{ each jobs }} {{ if user.job === $value.id }}
+            <option value="{{ $value.id }}" selected>{{ $value.name }}</option>
+            {{ else }}
+            <option value="{{ $value.id }}">{{ $value.name }}</option>
+            {{ /if }} {{ /each }}
+          </select>
+        </div>
+      </script>
+    <script src="node_modules/art-template/lib/template-web.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+</body>
+<script>
+    // var data = {}
+    // $.get('http://127.0.0.1:3000/users/4')
+    //     .then(function (user) {
+    //         data.user = user
+    //         return $.get('http://127.0.0.1:3000/jobs')
+    //     })
+    //     .then(function (jobs) {
+    //         data.jobs = jobs
+    //         console.log(template('tpl', data))
+    //         var htmlStr = template('tpl', data)
+    //         document.querySelector('#user_form').innerHTML = htmlStr
+    //     })
+
+    const pGet = (url, callback = () => { }) => {
+        return new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest()
+
+            xhr.onload = () => {
+                const data = JSON.parse(xhr.responseText)
+                callback(data)
+                resolve(data)
+            }
+
+            xhr.onerror = err => {
+                reject(err)
+            }
+
+            xhr.open('get', url, true)
+            xhr.send()
+        })
+    }
+
+    const data = {}
+    pGet('http://127.0.0.1:3000/users/4')
+        .then(function (user) {
+            data.user = user
+            return $.get('http://127.0.0.1:3000/jobs', data => console.log(data))
+        })
+        .then(function (jobs) {
+            data.jobs = jobs
+            console.log(data)
+            var htmlStr = template('tpl', data)
+            document.querySelector('#user_form').innerHTML = htmlStr
+        })
+</script>
+
+</html>
