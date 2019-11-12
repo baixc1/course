@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 262px;
+            height: 278px;
+            left: 200px;
+            top: 100px;
+            position: absolute;
+            z-index: -1;
+        }
+
+        canvas {
+            margin-left: 200px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <img src="1.jpg" />
+        <canvas id="canvas" width="400" height="300"></canvas>
+    </body>
+</body>
+<script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext('2d');
+    //画蒙布
+    context.beginPath();
+    context.fillStyle = 'grey'
+    let n = 2;
+    context.fillRect(0, 0, 131 * n, 139 * n);
+    //鼠标按下开刮
+    canvas.onmousedown = function () {
+        canvas.onmousemove = function () {
+            //获取鼠标坐标
+            var x = event.clientX;
+            var y = event.clientY;
+            //destination-out    显示原来的不在后来区域的部分
+            context.globalCompositeOperation = "destination-out";
+            context.beginPath();
+            context.ellipse(x - 200, y - 100, 10, 20, 0, 0, Math.PI * 2);
+            context.fill();
+        }
+    }
+    //鼠标抬起不刮开
+    document.onmouseup = function () {
+        canvas.onmousemove = function () {
+        }
+    } 
+</script>
+
+</html>

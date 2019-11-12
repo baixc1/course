@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            width: 100%;
+            padding: 20px 0;
+            background-color: red;
+        }
+
+        .canvasBox {
+            width: 78%;
+            height: 160px;
+            border-radius: 10px;
+            background-color: #FFF;
+            margin-left: 11%;
+            line-height: 160px;
+            text-align: center;
+            position: relative;
+        }
+
+        #canvas {
+            width: 96%;
+            height: 96%;
+            position: absolute;
+            left: 2%;
+            top: 2%;
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="canvasBox">
+            <span id="prize">
+                恭喜发财，红包拿来
+            </span>
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext('2d');
+
+    var arr = getOffset(canvas);
+    var oLeft = arr[0];
+    var oTop = arr[1];
+
+    ctx.beginPath();
+    ctx.fillStyle = '#ccc';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.closePath();
+
+    document.addEventListener("touchstart", function () {
+        ctx.beginPath();
+        ctx.lineWidth = 30;
+        ctx.globalCompositeOperation = 'destination-out';
+        ctx.moveTo(event.touches[0].pageX - oLeft, event.touches[0].pageY - oTop);
+    }, false)
+    document.addEventListener("touchmove", function () {
+        ctx.lineTo(event.touches[0].pageX - oLeft, event.touches[0].pageY - oTop);
+        ctx.stroke();
+    })
+
+    function getOffset(obj) {
+        var valLeft = 0, valTop = 0;
+        function get(obj) {
+            valLeft += obj.offsetLeft;
+            valTop += obj.offsetTop;
+            if (obj.offsetParent.tagName != 'BODY') {
+                get(obj.offsetParent);
+            }
+            return [valLeft, valTop];
+        }
+        return get(obj);
+    }
+</script>
+
+</html>

@@ -97,6 +97,7 @@ class LinkedList {
     }
 }
 
+
 // Test
 const LList = new LinkedList()
 
@@ -118,5 +119,3 @@ LList.display()
 LList.findByValue('chen')
 
 LList.findByIndex(2)
-
-export { Node, LinkedList }
